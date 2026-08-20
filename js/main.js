@@ -4,9 +4,12 @@ const mobileMenu = document.getElementById("mobileMenu");
 if (menuButton && mobileMenu) {
     menuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("open");
 
-        const isOpen = !mobileMenu.classList.contains("hidden");
-        menuButton.setAttribute("aria-expanded", isOpen);
+        menuButton.setAttribute(
+            "aria-expanded",
+            !mobileMenu.classList.contains("hidden")
+        );
     });
 }
 
