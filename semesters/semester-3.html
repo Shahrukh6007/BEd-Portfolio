@@ -4,10 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Semester III Portfolio of Shaik Afreen Abeda. Showcasing B.Ed academic journey, school internship preparation, field visits, and teaching practice.">
+    <meta name="author" content="Shaik Afreen Abeda">
+
     <title>Semester III - Shaik Afreen Abeda</title>
     <link rel="icon" type="image/png" href="../assets/icones/icon.png">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-50 text-gray-900">
@@ -26,9 +37,7 @@
 
                 <div class="hidden md:flex items-center gap-7">
                     <a href="../index.html"
-                        class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
-                        Home
-                    </a>
+                        class="nav-link text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Home</a>
 
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-sm font-semibold text-indigo-600 transition">
@@ -39,38 +48,30 @@
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-
                         <div
                             class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <div class="w-52 bg-white rounded-2xl shadow-xl border border-gray-200 p-2">
                                 <a href="semester-1.html"
-                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
-                                    Semester I
-                                </a>
+                                    class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester
+                                    I</a>
                                 <a href="semester-2.html"
-                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
-                                    Semester II
-                                </a>
+                                    class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester
+                                    II</a>
                                 <a href="semester-3.html"
-                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50">
-                                    Semester III
-                                </a>
+                                    class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50">Semester
+                                    III</a>
                                 <a href="semester-4.html"
-                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
-                                    Semester IV
-                                </a>
+                                    class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester
+                                    IV</a>
                             </div>
                         </div>
                     </div>
-
                     <a href="../experiences/school-internship.html"
-                        class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
-                        Internship
-                    </a>
+                        class="nav-link text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Internship</a>
                 </div>
 
                 <button id="menuButton" class="md:hidden p-2 rounded-full hover:bg-gray-100 transition"
-                    aria-label="Open navigation menu" aria-expanded="false">
+                    aria-label="Open navigation menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                             d="M4 6h16M4 12h16M4 18h16" />
@@ -78,26 +79,32 @@
                 </button>
             </div>
 
-            <!-- mobile menu -->
-        <div id="mobileMenu" class="mobile-menu">
-            <a href="../index.html" class="mobile-link">Home</a>
-
-            <button id="semesterButton" class="mobile-link mobile-semester-button">
-                <span>Semesters</span>
-                <svg id="semesterArrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-
-            <div id="semesterMenu" class="mobile-semester-menu">
-                <a href="semester-1.html" class="active">Semester I</a>
-                <a href="semester-2.html">Semester II</a>
-                <a href="semester-3.html">Semester III</a>
-                <a href="semester-4.html">Semester IV</a>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden flex-col gap-2 pt-4 pb-2">
+                <a href="../index.html"
+                    class="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-lg">Home</a>
+                <button id="semesterButton"
+                    class="flex justify-between items-center w-full px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <span>Semesters</span>
+                    <svg id="semesterArrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="semesterMenu" class="hidden flex-col gap-1 pl-4">
+                    <a href="semester-1.html"
+                        class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600">Semester I</a>
+                    <a href="semester-2.html"
+                        class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600">Semester II</a>
+                    <a href="semester-3.html"
+                        class="block px-4 py-2 text-sm font-medium text-indigo-600 bg-indigo-50 rounded-lg">Semester
+                        III</a>
+                    <a href="semester-4.html"
+                        class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600">Semester IV</a>
+                </div>
+                <a href="../experiences/school-internship.html"
+                    class="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-lg">Internship</a>
             </div>
-
-            <a href="../experiences/school-internship.html" class="mobile-link">Internship</a>
-        </div>
         </nav>
     </header>
 
@@ -106,182 +113,129 @@
         <!-- Header -->
         <section class="pt-32 pb-16 bg-slate-50 border-b border-gray-200">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-                    Semester III
-                </h1>
-                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-                    Immersive teaching practice, ICT integration, and educational field trips.
+                <span class="text-sm font-semibold text-indigo-600 tracking-widest uppercase">Academic Journey</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mt-3">Semester III</h1>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto leading-relaxed">
+                    This semester was all about bridging the gap between theory and actual classroom teaching. It
+                    covered everything from our pre-internship preparation to real field visits and finally facing my
+                    practical teaching assessment.
                 </p>
             </div>
         </section>
 
-        <!-- Biological Science -->
-        <section class="py-16 md:py-24 bg-white border-b border-gray-100">
+        <!-- Pre Internship Orientation -->
+        <section class="py-16 md:py-20 bg-white border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
-                        Core Teaching Practice
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                        Biological Science
-                    </h2>
-                    <div class="w-12 h-1 bg-indigo-600 rounded-full mt-4 mx-auto"></div>
-                    <p class="text-gray-600 leading-relaxed mt-6 text-lg">
-                        Semester III required taking full control of the classroom. I utilized a blend of traditional
-                        chalkboard diagramming and modern ICT tools to teach complex physiological and genetic concepts
-                        effectively.
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-3 gap-6 items-start">
-                    <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                        <img src="../assets/images/semester-3/bio.jpeg" alt="Teaching Structure of Eye"
-                            class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h3 class="text-white font-bold text-lg">
-                                Anatomy Diagrams
-                            </h3>
-                            <p class="text-indigo-200 text-sm mt-1">
-                                Live detailing of the human eye structure.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 lg:mt-12">
-                        <img src="../assets/images/semester-3/bio1.jpeg" alt="ICT Lesson Sex Determination"
-                            class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h3 class="text-white font-bold text-lg">
-                                ICT Integration
-                            </h3>
-                            <p class="text-indigo-200 text-sm mt-1">
-                                Digital presentation on genetics.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                        <img src="../assets/images/semester-3/bio2.jpeg" alt="Teaching Heredity"
-                            class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h3 class="text-white font-bold text-lg">
-                                Problem Solving
-                            </h3>
-                            <p class="text-indigo-200 text-sm mt-1">
-                                Working through genetic crosses on the board.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hindi Literature -->
-        <section class="py-16 md:py-24 bg-slate-50 border-b border-gray-200">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-5 flex flex-col space-y-4 order-2 md:order-1">
-                        <div
-                            class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-2">
-                            H
-                        </div>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
-                            Classical Hindi Literature
+                <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">Beginning the
+                            Journey</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Pre-Internship Orientation
                         </h2>
-                        <div class="w-12 h-1 bg-purple-600 rounded-full mt-2"></div>
-                        <p class="text-gray-700 mt-4 leading-relaxed text-lg">
-                            Teaching classical poetry requires translating historical contexts into lessons that
-                            resonate with today's students.
+                        <div class="w-12 h-1 bg-indigo-600 rounded-full mt-4"></div>
+                        <p class="text-gray-600 leading-relaxed text-lg mt-6">
+                            Before we stepped into real schools, we had a detailed orientation in college. Honestly,
+                            this was exactly what I needed to calm my nerves. We discussed everything from understanding
+                            the daily school culture to how to handle classroom discipline.
                         </p>
-                        <p class="text-gray-700 leading-relaxed text-lg">
-                            I designed custom visual charts to teach the timeless wisdom of
-                            <em>"Tulsidas aur Kabirdas ke Dohe"</em>.
-                            By combining visual aids with vocal recitation, students were able to grasp both the
-                            linguistic beauty and the moral lessons of the couplets.
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            It wasn't just about reading textbooks anymore; it was about learning how to work with other
+                            teachers, counselors, and the administration as a team. We spent a lot of time mapping out
+                            what is actually expected of us as student teachers once we enter the school gates.
                         </p>
                     </div>
-
-                    <div class="md:col-span-7 grid grid-cols-2 gap-4 sm:gap-6 order-1 md:order-2">
-                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100">
-                            <img src="../assets/images/semester-3/hindi3.jpeg"
-                                class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
-                                alt="Teaching Hindi with chart">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="../assets/images/semester-3/orientation.jpeg" alt="Orientation Session"
+                                class="w-full aspect-[4/5] object-cover" loading="lazy">
                         </div>
-
-                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100 mt-8">
-                            <img src="../assets/images/semester-3/hindi2.jpeg"
-                                class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
-                                alt="Close up of Hindi Dohe chart">
+                        <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100 mt-8">
+                            <img src="../assets/images/semester-3/orientation1.jpeg" alt="Orientation Discussion"
+                                class="w-full aspect-[4/5] object-cover" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Educational Tours -->
-        <section class="py-16 md:py-24 bg-white border-b border-gray-100">
+        <!-- Biological Science Pedagogy -->
+        <section class="py-16 md:py-20 bg-slate-50 border-b border-gray-200">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="max-w-3xl mb-12">
-                    <span class="text-sm font-semibold text-teal-600 tracking-wide uppercase">
-                        Beyond the Classroom
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                        Educational Tours &amp; Community Learning
-                    </h2>
-                    <div class="w-12 h-1 bg-teal-600 rounded-full mt-4"></div>
-                    <p class="text-gray-600 leading-relaxed mt-6 text-lg">
-                        A complete education extends beyond the four walls of a classroom. During Semester III, I had
-                        the opportunity to organize and lead students on interactive ecological study tours and
-                        participate in outdoor community learning events.
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <span class="text-sm font-semibold text-emerald-600 tracking-wide uppercase">Classroom
+                        Learning</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Biological Science Pedagogy</h2>
+                    <div class="w-12 h-1 bg-emerald-600 rounded-full mt-4 mx-auto"></div>
+                    <p class="text-gray-600 leading-relaxed text-lg mt-6">
+                        Teaching Science is completely different when you are standing in front of high schoolers. For
+                        my Biology lessons, I realized that just talking isn't enough. I put a lot of effort into
+                        drawing clear anatomy diagrams on the blackboard and using projectors so the students could
+                        actually see what we were discussing.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/edutripduringinternship.jpeg" alt="Botanical Garden Trip"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h3 class="text-white font-bold text-xl">
-                                Botanical Garden Tour
-                            </h3>
-                            <p class="text-teal-200 text-sm mt-1">
-                                Leading an interactive ecological study tour.
-                            </p>
-                        </div>
-                    </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <figure class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-200">
+                        <img src="../assets/images/semester-3/bio.jpeg" alt="Anatomy Diagrams on Board"
+                            class="w-full aspect-square object-cover" loading="lazy">
+                        <figcaption class="p-5">
+                            <h3 class="font-bold text-gray-900">Anatomy Diagrams</h3>
+                            <p class="text-sm text-gray-500 mt-2">Practicing my blackboard work to explain complex
+                                structures, like the layers of the human eye.</p>
+                        </figcaption>
+                    </figure>
 
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/trip.jpeg" alt="Outdoor Event at Chandrayangutta"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h3 class="text-white font-bold text-xl">
-                                Community Learning
-                            </h3>
-                            <p class="text-teal-200 text-sm mt-1">
-                                Organizing outdoor educational events.
-                            </p>
-                        </div>
-                    </div>
+                    <figure class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-200 md:mt-8">
+                        <img src="../assets/images/semester-3/bio1.jpeg" alt="ICT based biology lesson"
+                            class="w-full aspect-square object-cover" loading="lazy">
+                        <figcaption class="p-5">
+                            <h3 class="font-bold text-gray-900">ICT Integration</h3>
+                            <p class="text-sm text-gray-500 mt-2">Using digital slides to teach topics like gender
+                                determination, which keeps the students much more focused.</p>
+                        </figcaption>
+                    </figure>
 
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/trip1.jpeg" alt="Group interaction at educational event"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h3 class="text-white font-bold text-xl">
-                                Collaborative Learning
-                            </h3>
-                            <p class="text-teal-200 text-sm mt-1">
-                                Engaging with educators and the community.
-                            </p>
+                    <figure class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-200">
+                        <img src="../assets/images/semester-3/bio2.jpeg" alt="Heredity and genetics lesson"
+                            class="w-full aspect-square object-cover" loading="lazy">
+                        <figcaption class="p-5">
+                            <h3 class="font-bold text-gray-900">Concept Development</h3>
+                            <p class="text-sm text-gray-500 mt-2">Breaking down cross-pollination and heredity
+                                step-by-step so the class could figure it out together.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hindi Pedagogy -->
+        <section class="py-16 md:py-20 bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-12 gap-10 items-center">
+                    <div class="md:col-span-5">
+                        <span class="text-sm font-semibold text-purple-600 tracking-wide uppercase">Language
+                            Pedagogy</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Hindi Teaching Practice</h2>
+                        <div class="w-12 h-1 bg-purple-600 rounded-full mt-4"></div>
+                        <p class="text-gray-600 leading-relaxed text-lg mt-6">
+                            When it came to teaching Hindi, my main challenge was making classic literature and poetry
+                            interesting for the class. I spent a lot of time preparing colorful, handmade charts
+                            featuring great poets like Tulsidas and Kabir Das.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            I wrote down their famous 'Dohas' so the students could read along with me. Having that
+                            visual chart right next to the blackboard made a huge difference—it kept their attention and
+                            made the older language much easier for them to grasp.
+                        </p>
+                    </div>
+                    <div class="md:col-span-7 grid grid-cols-2 gap-4 sm:gap-6">
+                        <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="../assets/images/semester-3/hindi.jpeg" alt="Hindi poetry chart"
+                                class="w-full aspect-[4/5] object-cover" loading="lazy">
+                        </div>
+                        <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100 mt-8">
+                            <img src="../assets/images/semester-3/hindi3.jpeg" alt="Teaching Hindi in classroom"
+                                class="w-full aspect-[4/5] object-cover" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -289,164 +243,153 @@
         </section>
 
         <!-- Educational Tour -->
-        <section class="py-16 md:py-24 bg-white border-b border-gray-100">
+        <section class="py-16 md:py-20 bg-slate-50 border-b border-gray-200">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div>
-                        <span class="text-sm font-semibold text-teal-600 tracking-wide uppercase">
-                            Experiential Learning
-                        </span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                            Educational Tour
-                        </h2>
+                        <span class="text-sm font-semibold text-teal-600 tracking-wide uppercase">Beyond the
+                            Classroom</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Educational Tour</h2>
                         <div class="w-12 h-1 bg-teal-600 rounded-full mt-4"></div>
-                        <h3 class="text-xl font-bold text-gray-900 mt-6">
-                            Botanical Garden Study Visit
-                        </h3>
-                        <p class="text-gray-600 leading-relaxed mt-3 text-lg">
-                            During Semester III, I organized and led students on an interactive educational visit to
-                            the Botanical Garden. This excursion gave students hands-on exposure to diverse plant
-                            species and ecological concepts outside the traditional classroom environment.
+                        <h3 class="text-xl font-bold text-gray-900 mt-6">Botanical Garden Study Visit</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg mt-3">
+                            Getting the kids out of the classroom was definitely a highlight! We organized a study trip
+                            to the Botanical Garden, and it was such a refreshing experience for everyone. It's one
+                            thing to teach about plant types from a book, but letting them actually walk around and
+                            identify the plants made the lesson stick.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            As a teacher, it also taught me a lot about how to manage a large group of energetic
+                            students outside the school building while keeping them focused on learning.
                         </p>
                     </div>
-
-                    <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
                         <img src="../assets/images/semester-3/edutripduringinternship.jpeg"
-                            alt="Botanical Garden Educational Tour"
-                            class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
-                            <h4 class="text-white font-bold text-lg">
-                                Botanical Garden Tour
-                            </h4>
-                            <p class="text-teal-200 text-sm mt-1">
-                                Interactive ecological learning with students.
-                            </p>
-                        </div>
+                            alt="Botanical Garden Educational Tour" class="w-full aspect-[4/3] object-cover"
+                            loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- MV Foundation -->
-        <section class="py-16 md:py-24 bg-slate-50 border-b border-gray-200">
+        <!-- MV Foundation Visit -->
+        <section class="py-16 md:py-20 bg-white border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="max-w-3xl mb-12">
-                    <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
-                        Field Trip
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mt-2">
+                <div class="max-w-3xl mb-10">
+                    <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">Case Study</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
                         <a href="https://mvfindia.in/" target="_blank" rel="noopener noreferrer"
-                            class="text-gray-900 hover:text-indigo-600 transition-colors duration-300 underline decoration-indigo-300 decoration-4 underline-offset-4">
-                            Visiting the Mamidipudi Venkatarangaiya Foundation (MV Foundation)
+                            class="hover:text-indigo-600 transition">
+                            Visit to MV Foundation
                         </a>
                     </h2>
                     <div class="w-12 h-1 bg-indigo-600 rounded-full mt-4"></div>
-                    <p class="text-gray-600 leading-relaxed mt-6 text-lg">
-                        As part of our field trip and community learning module, we visited the MV Foundation to
-                        understand grassroots educational outreach, child rights advocacy, and community-level
-                        educational interventions.
+                    <p class="text-gray-600 leading-relaxed text-lg mt-6">
+                        Our visit to the MV Foundation was a real eye-opener for me. We got to see the ground reality of
+                        how NGOs work to stop child labor and bring children back into the education system through
+                        bridge courses.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mt-4">
+                        We listened to presentations and interacted with the social workers there. It made me realize
+                        that being a teacher isn't just about finishing the syllabus; it's also about understanding the
+                        social backgrounds of our students and knowing how to support children who might be struggling
+                        at home.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/trip.jpeg" alt="Outdoor Community Learning"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
-                            <h4 class="text-white font-bold text-base">
-                                Community Engagement
-                            </h4>
-                            <p class="text-indigo-200 text-xs mt-1">
-                                Outdoor educational session at Chandrayangutta.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/trip1.jpeg" alt="Group discussion at field site"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
-                            <h4 class="text-white font-bold text-base">
-                                Cohort Collaboration
-                            </h4>
-                            <p class="text-indigo-200 text-xs mt-1">
-                                Group interaction during the field visit.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl overflow-hidden shadow-md">
                         <img src="../assets/images/semester-3/trip2.jpeg" alt="MV Foundation Presentation"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
-                            <h4 class="text-white font-bold text-base">
-                                Foundation Briefing
-                            </h4>
-                            <p class="text-indigo-200 text-xs mt-1">
-                                Overview of child rights and bridge-course models.
-                            </p>
-                        </div>
+                            class="w-full aspect-square object-cover" loading="lazy">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-md md:mt-8">
+                        <img src="../assets/images/semester-3/trip1.jpeg" alt="MV Foundation Group Activity"
+                            class="w-full aspect-square object-cover" loading="lazy">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-md">
+                        <img src="../assets/images/semester-3/trip.jpeg" alt="Community integration session"
+                            class="w-full aspect-square object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Lesson Planning & Seminars -->
+        <section class="py-16 md:py-20 bg-slate-50 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-rose-600 tracking-wide uppercase">Preparation &
+                            Seminars</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Digital Planning & Seminars
+                        </h2>
+                        <div class="w-12 h-1 bg-rose-600 rounded-full mt-4"></div>
+                        <p class="text-gray-600 leading-relaxed text-lg mt-6">
+                            A big chunk of our time went into writing proper lesson plans. We had to shift from
+                            traditional paper planning to creating digital lesson plans using laptops and smartboards.
+                            It took some getting used to, but it makes teaching so much more interactive.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            I also had to give seminar presentations to my peers and professors on how to use these
+                            digital tools. Standing up there and answering questions during the seminar really built up
+                            my confidence for public speaking, which I knew I would need for my final teaching exams.
+                        </p>
                     </div>
 
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/trip3.jpeg" alt="Speaker at MV Foundation"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
-                            <h4 class="text-white font-bold text-base">
-                                Expert Insights
-                            </h4>
-                            <p class="text-indigo-200 text-xs mt-1">
-                                Addressing educational barriers in underserved communities.
-                            </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="../assets/images/semester-3/ict.jpeg" alt="Seminar Presentation"
+                                class="w-full aspect-[4/5] object-cover" loading="lazy">
                         </div>
-                    </div>
-
-                    <div
-                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
-                        <img src="../assets/images/semester-3/trip4.jpeg" alt="Session on educational implementation"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
-                            <h4 class="text-white font-bold text-base">
-                                Session Review
-                            </h4>
-                            <p class="text-indigo-200 text-xs mt-1">
-                                Pedagogical strategies and implementation analysis.
-                            </p>
+                        <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100 mt-8">
+                            <img src="../assets/images/semester-3/ict1.jpeg" alt="Digital Lesson Plan Display"
+                                class="w-full aspect-[4/5] object-cover" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="py-20 bg-slate-900 text-white">
+        <!-- Practical Examination -->
+        <section class="py-16 md:py-20 bg-slate-900 text-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-indigo-300 tracking-wide uppercase">Culmination</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Practical Examination & Assessment</h2>
+                        <div class="w-12 h-1 bg-indigo-400 rounded-full mt-4"></div>
+                        <p class="text-gray-300 leading-relaxed text-lg mt-6">
+                            Everything we learned led up to the final practical teaching exams. This was the moment
+                            where I had to prove I could actually run a classroom on my own. I taught my final lesson on
+                            Biology, making sure my blackboard work was neat and that I used my charts effectively.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mt-4">
+                            Honestly, it was a bit nerve-wracking knowing the examiners were sitting in the back
+                            watching my every move. But seeing the students raise their hands and answer my questions
+                            made it all worth it. It felt like all the hard work of Semester 3 finally paid off.
+                        </p>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                        <img src="../assets/images/semester-3/bio3.jpeg" alt="Practical teaching assessment collage"
+                            class="w-full aspect-[4/3] object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 bg-gray-950 text-white border-t border-gray-800">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-3xl font-extrabold">
-                    Connect the Experience
-                </h2>
-                <p class="text-gray-400 mt-4 text-lg">
-                    See how Semester III fits into the complete timeline of my academic development and practical
-                    teaching journey.
-                </p>
+                <span class="text-sm text-indigo-400 font-semibold tracking-widest uppercase">Continuing the
+                    Journey</span>
+                <h2 class="text-3xl font-extrabold mt-2">From Preparation to Practice</h2>
                 <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                     <a href="semester-2.html"
-                        class="px-8 py-4 bg-gray-800 text-white font-bold rounded-full hover:bg-gray-700 transition-all duration-300">
-                        ← Back to Semester II
-                    </a>
-                    <a href="../journey.html"
-                        class="px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-500 hover:-translate-y-1 transition-all duration-300">
-                        View Full Academic Journey →
-                    </a>
+                        class="px-8 py-4 bg-gray-800 text-white font-bold rounded-full hover:bg-gray-700 transition">←
+                        Back to Semester II</a>
+                    <a href="../experiences/school-internship.html"
+                        class="px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-500 hover:-translate-y-1 transition">View
+                        Internship →</a>
                 </div>
             </div>
         </section>
@@ -454,25 +397,29 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 text-white">
+    <footer class="bg-gray-950 text-white border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-6 py-10">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                 <div>
-                    <h2 class="text-xl font-bold">
-                        Shaik Afreen Abeda
-                    </h2>
-                    <p class="text-sm text-gray-400 mt-1">
-                        B.Ed Student Teacher
-                    </p>
+                    <h2 class="text-xl font-bold">Shaik Afreen Abeda</h2>
+                    <p class="text-sm text-gray-400 mt-1">B.Ed Student Teacher</p>
                 </div>
-                <p class="text-sm text-gray-500">
-                    © 2026 Shaik Afreen Abeda. All rights reserved.
-                </p>
+                <p class="text-sm text-gray-500">© 2026 Shaik Afreen Abeda. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-500 z-50 focus:outline-none"
+        aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
     <script src="../js/main.js"></script>
+
 </body>
 
 </html>
