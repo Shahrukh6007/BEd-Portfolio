@@ -3,7 +3,10 @@ const mobileMenu = document.getElementById("mobileMenu");
 
 if (menuButton && mobileMenu) {
     menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("open");
+        mobileMenu.classList.toggle("hidden");
+
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        menuButton.setAttribute("aria-expanded", isOpen);
     });
 }
 
