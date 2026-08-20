@@ -10,628 +10,408 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-stone-50 text-slate-900">
 
     <!-- Navbar -->
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="index.html"
-                class="flex items-center gap-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
-                <img src="assets/icones/icon.png" alt="Shaik Afreen Abeda Logo"
-                    class="w-9 h-9 rounded-full object-cover shadow-sm ring-1 ring-gray-200">
-                <span>Afreen</span>
-            </a>
+    <header class="fixed top-4 left-0 w-full z-50 px-4">
+        <nav class="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg border border-slate-200 shadow-lg rounded-2xl px-5 md:px-7 py-3">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 text-xl md:text-2xl font-extrabold tracking-tight text-slate-900 hover:text-indigo-600 transition">
+                    <img src="assets/icones/icon.png" alt="SAA Logo" class="w-9 h-9 rounded-full object-cover shadow-sm ring-1 ring-slate-200">
+                    <span>Afreen</span>
+                </a>
 
-            <div class="desktop-nav">
-                <a href="index.html" class="nav-link active">Home</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-semibold text-indigo-600">Home</a>
 
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-button">
-                        Semesters
-                        <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-indigo-600 transition">
+                            Semesters
+                            <svg class="w-4 h-4 group-hover:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
 
-                    <div class="dropdown-menu">
-                        <a href="semesters/semester-1.html">Semester I</a>
-                        <a href="semesters/semester-2.html">Semester II</a>
-                        <a href="semesters/semester-3.html">Semester III</a>
-                        <a href="semesters/semester-4.html">Semester IV</a>
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="w-52 bg-white border border-slate-200 rounded-xl shadow-xl p-2">
+                                <a href="semesters/semester-1.html" class="block px-4 py-3 rounded-lg text-sm font-semibold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester I</a>
+                                <a href="semesters/semester-2.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester II</a>
+                                <a href="semesters/semester-3.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester III</a>
+                                <a href="semesters/semester-4.html" class="block px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition">Semester IV</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <a href="experiences/school-internship.html" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition">Internship</a>
                 </div>
 
-                <a href="experiences/school-internship.html" class="nav-link">Internship</a>
+                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Open navigation menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
 
-            <button id="menuButton" class="mobile-menu-button" aria-label="Open navigation menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 mt-3 pt-3">
+                <div class="flex flex-col gap-1">
+                    <a href="index.html" class="px-4 py-3 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">Home</a>
+
+                    <div>
+                        <div class="px-4 py-3 text-sm font-semibold text-slate-700">Semesters</div>
+                        <div class="ml-3 border-l border-indigo-200 pl-2">
+                            <a href="semesters/semester-1.html" class="block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-slate-50">Semester I</a>
+                            <a href="semesters/semester-2.html" class="block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-slate-50">Semester II</a>
+                            <a href="semesters/semester-3.html" class="block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-slate-50">Semester III</a>
+                            <a href="semesters/semester-4.html" class="block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-slate-50">Semester IV</a>
+                        </div>
+                    </div>
+
+                    <a href="experiences/school-internship.html" class="px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50">Internship</a>
+                </div>
+            </div>
         </nav>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu">
-            <a href="index.html" class="mobile-link active">Home</a>
-
-            <button id="semesterButton" class="mobile-link mobile-semester-button">
-                <span>Semesters</span>
-                <svg id="semesterArrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-
-            <div id="semesterMenu" class="mobile-semester-menu">
-                <a href="semesters/semester-1.html">Semester I</a>
-                <a href="semesters/semester-2.html">Semester II</a>
-                <a href="semesters/semester-3.html">Semester III</a>
-                <a href="semesters/semester-4.html">Semester IV</a>
-            </div>
-
-            <a href="experiences/school-internship.html" class="mobile-link">Internship</a>
-        </div>
     </header>
 
     <main>
 
         <!-- Hero -->
-        <section class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-label">
-                        <span></span>
-                        B.Ed Student Teacher
-                    </div>
+        <section class="pt-36 md:pt-40 pb-20 md:pb-24 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-                    <h1>
-                        Hi, I'm
-                        <strong>Shaik Afreen Abeda.</strong>
-                    </h1>
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
+                            <span class="w-8 h-px bg-indigo-600"></span>
+                            B.Ed Student Teacher
+                        </div>
 
-                    <p class="college-name">
-                        R.G.R SIDDANTHI COLLEGE OF EDUCATION
-                    </p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mt-5 leading-[1.05]">
+                            Hi, I'm
+                            <span class="text-indigo-600">Shaik Afreen Abeda.</span>
+                        </h1>
 
-                    <p class="hero-description">
-                        My B.Ed journey has been a continuous process of learning,
-                        practice, reflection, and growth. Through academic study,
-                        teaching activities, creative work, and school-based
-                        experiences, I have developed a deeper understanding of
-                        what it means to be an effective teacher.
-                    </p>
+                        <p class="text-sm md:text-base font-bold uppercase tracking-[0.16em] text-slate-500 mt-7">
+                            R.G.R SIDDHANTHI COLLEGE OF EDUCATION
+                        </p>
 
-                    <p class="hero-description">
-                        My areas of pedagogical interest are
-                        <strong>Biological Science</strong> and
-                        <strong>Hindi</strong>, through which I continue to explore
-                        meaningful, creative, and learner-centred approaches to
-                        classroom teaching.
-                    </p>
+                        <p class="text-lg md:text-xl text-slate-600 leading-8 mt-7 max-w-2xl">
+                            My teaching practice has been a challenging yet rewarding journey that has allowed me to connect theoretical knowledge with real classroom experiences. Through each experience, I have learned to understand diverse student needs, develop effective teaching strategies, and reflect on my own practice.
+                        </p>
 
-                    <div class="hero-actions">
-                        <a href="semesters/semester-1.html" class="primary-button">
-                            Explore My Journey
-                            <span>→</span>
-                        </a>
-                    </div>
-                </div>
+                        <div class="flex flex-wrap gap-3 mt-8">
+                            <span class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold border border-indigo-100">
+                                Biological Science
+                            </span>
+                            <span class="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold border border-slate-200">
+                                Hindi
+                            </span>
+                            <span class="px-4 py-2 rounded-full bg-teal-50 text-teal-700 text-sm font-semibold border border-teal-100">
+                                Student Teacher
+                            </span>
+                        </div>
 
-                <div class="hero-image-wrapper">
-                    <div class="hero-image-frame">
-                        <div class="hero-image-accent"></div>
+                        <div class="flex flex-wrap gap-4 mt-9">
+                            <a href="semesters/semester-1.html" class="inline-flex items-center gap-3 px-7 py-3.5 bg-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 hover:-translate-y-0.5 transition">
+                                Explore My Journey
+                                <span>→</span>
+                            </a>
 
-                        <img src="assets/images/semester-1/seminar1.jpeg"
-                            alt="Shaik Afreen Abeda during her B.Ed academic journey">
-
-                        <div class="hero-image-caption">
-                            <span>01</span>
-                            Student Teacher Portfolio
+                            <a href="#about" class="inline-flex items-center gap-3 px-7 py-3.5 bg-white text-slate-700 font-bold rounded-xl border border-slate-300 hover:border-indigo-300 hover:text-indigo-600 transition">
+                                About My Portfolio
+                            </a>
                         </div>
                     </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="relative max-w-md mx-auto">
+                            <div class="absolute -top-5 -right-5 w-24 h-24 rounded-3xl bg-indigo-100"></div>
+                            <div class="absolute -bottom-5 -left-5 w-28 h-28 rounded-3xl bg-teal-100"></div>
+
+                            <div class="relative rounded-[2rem] overflow-hidden bg-white border border-slate-200 p-3 shadow-xl">
+                                <img src="assets/images/semester-1/seminar1.jpeg" alt="Shaik Afreen Abeda during her B.Ed seminar" class="w-full aspect-[4/5] object-cover rounded-[1.5rem]">
+
+                                <div class="absolute bottom-7 left-7 right-7 bg-white/95 backdrop-blur-sm rounded-xl px-5 py-4 border border-white shadow-lg">
+                                    <p class="text-xs uppercase tracking-[0.15em] font-bold text-indigo-600">Portfolio</p>
+                                    <p class="text-sm font-semibold text-slate-800 mt-1">A journey from learning to teaching</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- About -->
-        <section class="py-20 md:py-28 bg-white border-b border-gray-100">
+        <section id="about" class="py-20 md:py-24 bg-stone-50 border-b border-slate-200">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div class="grid md:grid-cols-12 gap-12 items-start">
+
                     <div class="md:col-span-4">
-                        <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
-                            About Me
-                        </span>
-
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                            Becoming a Teacher
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">About Me</span>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
+                            Becoming a teacher through experience.
                         </h2>
-
-                        <div class="w-12 h-1 bg-indigo-600 rounded-full mt-5"></div>
+                        <div class="w-10 h-1 bg-indigo-600 mt-5"></div>
                     </div>
 
                     <div class="md:col-span-8">
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            I am a B.Ed student teacher pursuing my professional
-                            preparation at R.G.R Siddanthi College of Education.
-                            My teacher education journey has helped me connect
-                            educational theory with practical classroom situations
-                            and understand the responsibilities that come with
-                            being a teacher.
+                        <p class="text-lg text-slate-600 leading-8">
+                            My B.Ed journey has given me opportunities to learn about education, pedagogy, classroom practices, and the responsibilities of a teacher. Each academic activity and teaching experience has helped me understand how theoretical knowledge can be transformed into meaningful learning experiences.
                         </p>
 
-                        <p class="text-gray-700 text-lg leading-relaxed mt-5">
-                            Throughout my semesters, I have participated in seminars,
-                            pedagogical activities, creative teaching-aid development,
-                            peer teaching, school internship, and other academic
-                            experiences. Each of these experiences has contributed
-                            to my confidence, communication skills, classroom
-                            awareness, and professional growth.
+                        <p class="text-slate-500 leading-8 mt-5">
+                            This portfolio documents my academic journey across four semesters, my pedagogy learning in Biological Science and Hindi, and my experiences in teaching practice, school internship, activities, and professional development.
                         </p>
 
-                        <p class="text-gray-700 text-lg leading-relaxed mt-5">
-                            This portfolio brings those experiences together as a
-                            record of my development as a student teacher and as
-                            a reflection of the teacher I am working towards becoming.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pedagogy -->
-        <section class="py-20 md:py-28 bg-slate-50 border-b border-gray-200">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="max-w-3xl mb-12">
-                    <span class="text-sm font-semibold text-rose-600 tracking-wide uppercase">
-                        Teaching Identity
-                    </span>
-
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                        My Areas of Pedagogical Practice
-                    </h2>
-
-                    <div class="w-12 h-1 bg-rose-600 rounded-full mt-4"></div>
-
-                    <p class="text-gray-600 text-lg leading-relaxed mt-6">
-                        My B.Ed preparation combines subject knowledge with
-                        pedagogical understanding, creative teaching practices,
-                        and classroom experience.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
-                        <div class="flex items-center justify-between gap-4">
-                            <div>
-                                <span class="text-sm font-semibold text-teal-600 uppercase tracking-wide">
-                                    Pedagogy I
-                                </span>
-
-                                <h3 class="text-2xl font-extrabold text-gray-900 mt-2">
-                                    Biological Science
-                                </h3>
+                        <div class="grid sm:grid-cols-3 gap-4 mt-8">
+                            <div class="bg-white border border-slate-200 rounded-2xl p-5">
+                                <span class="text-2xl font-bold text-indigo-600">04</span>
+                                <p class="text-sm font-semibold text-slate-700 mt-2">Semesters</p>
+                                <p class="text-xs text-slate-500 mt-1">Academic journey</p>
                             </div>
 
-                            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl">
-                                🧬
+                            <div class="bg-white border border-slate-200 rounded-2xl p-5">
+                                <span class="text-2xl font-bold text-teal-600">02</span>
+                                <p class="text-sm font-semibold text-slate-700 mt-2">Pedagogy Areas</p>
+                                <p class="text-xs text-slate-500 mt-1">Biological Science & Hindi</p>
+                            </div>
+
+                            <div class="bg-white border border-slate-200 rounded-2xl p-5">
+                                <span class="text-2xl font-bold text-rose-600">01</span>
+                                <p class="text-sm font-semibold text-slate-700 mt-2">Teaching Journey</p>
+                                <p class="text-xs text-slate-500 mt-1">Learning through practice</p>
                             </div>
                         </div>
-
-                        <p class="text-gray-600 leading-relaxed mt-5">
-                            Exploring biological concepts through demonstrations,
-                            teaching aids, models, diagrams, observation, and
-                            activity-based classroom experiences.
-                        </p>
-
-                        <a href="semesters/semester-2.html"
-                            class="inline-flex items-center gap-2 mt-6 text-sm font-bold text-teal-600 hover:text-teal-700 transition">
-                            Explore Biological Science Work
-                            <span>→</span>
-                        </a>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
-                        <div class="flex items-center justify-between gap-4">
-                            <div>
-                                <span class="text-sm font-semibold text-rose-600 uppercase tracking-wide">
-                                    Pedagogy II
-                                </span>
-
-                                <h3 class="text-2xl font-extrabold text-gray-900 mt-2">
-                                    Hindi
-                                </h3>
-                            </div>
-
-                            <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl">
-                                अ
-                            </div>
-                        </div>
-
-                        <p class="text-gray-600 leading-relaxed mt-5">
-                            Developing language-learning experiences through
-                            creative activities, literary expression, visual
-                            resources, and learner-friendly approaches to Hindi.
-                        </p>
-
-                        <a href="semesters/semester-2.html"
-                            class="inline-flex items-center gap-2 mt-6 text-sm font-bold text-rose-600 hover:text-rose-700 transition">
-                            Explore Hindi Work
-                            <span>→</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Academic Journey -->
-        <section class="journey-section" id="journey">
-            <div class="section-container">
-                <div class="section-heading">
-                    <div class="section-number">01</div>
-
-                    <div>
-                        <span class="section-label">My Academic Journey</span>
-
-                        <h2>Four Semesters, One Journey</h2>
-
-                        <p>
-                            Each semester has been an important step in developing
-                            my knowledge, skills, confidence, and understanding
-                            of the teaching profession.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="semester-grid">
-                    <a href="semesters/semester-1.html" class="semester-card">
-                        <div class="semester-top">
-                            <span class="semester-number">01</span>
-                            <span class="semester-arrow">↗</span>
-                        </div>
-
-                        <h3>Semester I</h3>
-
-                        <p>
-                            Building the foundation of my B.Ed journey through
-                            foundational courses, seminars, and initial academic
-                            experiences.
-                        </p>
-
-                        <span class="card-link">View Semester</span>
-                    </a>
-
-                    <a href="semesters/semester-2.html" class="semester-card">
-                        <div class="semester-top">
-                            <span class="semester-number">02</span>
-                            <span class="semester-arrow">↗</span>
-                        </div>
-
-                        <h3>Semester II</h3>
-
-                        <p>
-                            Developing pedagogical knowledge through Biological
-                            Science, Hindi, Art in Education, and practical
-                            teaching activities.
-                        </p>
-
-                        <span class="card-link">View Semester</span>
-                    </a>
-
-                    <a href="semesters/semester-3.html" class="semester-card">
-                        <div class="semester-top">
-                            <span class="semester-number">03</span>
-                            <span class="semester-arrow">↗</span>
-                        </div>
-
-                        <h3>Semester III</h3>
-
-                        <p>
-                            Applying academic knowledge through activities,
-                            practice, reflection, and continued professional
-                            development.
-                        </p>
-
-                        <span class="card-link">View Semester</span>
-                    </a>
-
-                    <a href="semesters/semester-4.html" class="semester-card">
-                        <div class="semester-top">
-                            <span class="semester-number">04</span>
-                            <span class="semester-arrow">↗</span>
-                        </div>
-
-                        <h3>Semester IV</h3>
-
-                        <p>
-                            Bringing together professional preparation,
-                            classroom experience, reflection, and the final
-                            stages of teacher education.
-                        </p>
-
-                        <span class="card-link">View Semester</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- First Seminar -->
-        <section class="py-20 md:py-28 bg-white border-b border-gray-100">
+        <section class="py-20 md:py-24 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    <div>
-                        <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
-                            A Beginning to Remember
-                        </span>
 
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                            My First Seminar
-                        </h2>
-
-                        <div class="w-12 h-1 bg-indigo-600 rounded-full mt-5"></div>
-
-                        <p class="text-gray-700 text-lg leading-relaxed mt-6">
-                            One of the early academic experiences in my B.Ed
-                            journey was presenting a seminar on
-                            <strong>Educational Psychology</strong>.
-                        </p>
-
-                        <p class="text-gray-700 text-lg leading-relaxed mt-5">
-                            This experience gave me an opportunity to engage
-                            with educational concepts beyond textbooks,
-                            organise information, communicate ideas, and
-                            develop confidence in presenting before others.
-                        </p>
-
-                        <a href="semesters/semester-1.html"
-                            class="inline-flex items-center gap-2 mt-7 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition">
-                            View Semester I
-                            <span>→</span>
-                        </a>
-                    </div>
-
-                    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-slate-50">
-                        <img src="assets/images/semester-1/seminar1.jpeg"
-                            alt="Educational Psychology seminar"
-                            class="w-full aspect-[4/3] object-cover">
-
-                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm px-6 py-4 border-t border-gray-200">
-                            <p class="text-sm font-bold text-gray-900">
-                                Educational Psychology
-                            </p>
-
-                            <p class="text-xs text-gray-500 mt-1">
-                                My first seminar experience during B.Ed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Teaching Practice -->
-        <section class="practice-section">
-            <div class="section-container">
-                <div class="practice-layout">
-                    <div class="practice-content">
-                        <span class="section-label">Teaching Practice</span>
-
-                        <h2>Learning beyond the classroom</h2>
-
-                        <p>
-                            Teaching practice has given me the opportunity to
-                            experience the realities of a classroom, interact
-                            with learners, plan lessons, use teaching aids,
-                            and reflect on my approach to teaching.
-                        </p>
-
-                        <p>
-                            My school internship at
-                            <strong>Wesley Co-Ed High School</strong>
-                            became an important part of this journey, allowing
-                            me to connect my teacher-education learning with
-                            actual school experiences.
-                        </p>
-
-                        <a href="experiences/school-internship.html" class="dark-button">
-                            Explore Teaching Practice
-                            <span>→</span>
-                        </a>
-                    </div>
-
-                    <div class="practice-grid">
-                        <div class="practice-card">
-                            <span>01</span>
-                            <h3>Lesson Planning</h3>
-                            <p>Planning meaningful and structured learning experiences.</p>
-                        </div>
-
-                        <div class="practice-card">
-                            <span>02</span>
-                            <h3>Classroom Management</h3>
-                            <p>Understanding learners and creating a positive learning environment.</p>
-                        </div>
-
-                        <div class="practice-card">
-                            <span>03</span>
-                            <h3>Teaching Aids</h3>
-                            <p>Using creative resources to make learning engaging and meaningful.</p>
-                        </div>
-
-                        <div class="practice-card">
-                            <span>04</span>
-                            <h3>Reflection</h3>
-                            <p>Learning from every classroom experience and continuously improving practice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Highlights -->
-        <section class="py-20 md:py-28 bg-slate-50 border-b border-gray-200">
-            <div class="max-w-6xl mx-auto px-6">
                 <div class="max-w-3xl mb-12">
-                    <span class="text-sm font-semibold text-teal-600 tracking-wide uppercase">
-                        Portfolio Highlights
-                    </span>
-
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">
-                        Beyond the Semester Pages
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">Academic Journey</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
+                        Four semesters, one journey.
                     </h2>
-
-                    <div class="w-12 h-1 bg-teal-600 rounded-full mt-4"></div>
-
-                    <p class="text-gray-600 text-lg leading-relaxed mt-6">
-                        My portfolio also documents the practical and creative
-                        experiences that have shaped my development as a
-                        student teacher.
+                    <div class="w-10 h-1 bg-indigo-600 mt-5"></div>
+                    <p class="text-slate-600 leading-8 mt-6">
+                        Each semester has been an important step in developing my knowledge, skills, confidence, and understanding of the teaching profession.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <a href="experiences/school-internship.html"
-                        class="group bg-white border border-gray-200 rounded-3xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">
-                            Experience
-                        </span>
-
-                        <h3 class="text-xl font-extrabold text-gray-900 mt-3">
-                            School Internship
-                        </h3>
-
-                        <p class="text-gray-600 leading-relaxed mt-3">
-                            Classroom teaching, school activities,
-                            parent-teacher interaction, and professional
-                            responsibilities.
+                    <a href="semesters/semester-1.html" class="group bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:bg-indigo-600 hover:border-indigo-600 hover:-translate-y-1 transition duration-300">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-bold text-indigo-600 group-hover:text-indigo-200">01</span>
+                            <span class="text-xl text-slate-400 group-hover:text-white">↗</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white mt-8">Semester I</h3>
+                        <p class="text-sm text-slate-500 group-hover:text-indigo-100 leading-6 mt-3">
+                            Building the foundation of my B.Ed journey.
                         </p>
-
-                        <span class="inline-flex items-center gap-2 mt-6 text-sm font-bold text-teal-600">
-                            Explore Experience
-                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        <span class="inline-block text-sm font-semibold text-indigo-600 group-hover:text-white mt-6">
+                            Explore →
                         </span>
                     </a>
 
-                    <a href="experiences/art-in-education.html"
-                        class="group bg-white border border-gray-200 rounded-3xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-
-                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">
-                            Creative Practice
-                        </span>
-
-                        <h3 class="text-xl font-extrabold text-gray-900 mt-3">
-                            Art in Education
-                        </h3>
-
-                        <p class="text-gray-600 leading-relaxed mt-3">
-                            Creative teaching aids, scientific models,
-                            visual resources, and artistic learning activities.
+                    <a href="semesters/semester-2.html" class="group bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:bg-indigo-600 hover:border-indigo-600 hover:-translate-y-1 transition duration-300">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-bold text-indigo-600 group-hover:text-indigo-200">02</span>
+                            <span class="text-xl text-slate-400 group-hover:text-white">↗</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white mt-8">Semester II</h3>
+                        <p class="text-sm text-slate-500 group-hover:text-indigo-100 leading-6 mt-3">
+                            Developing knowledge, skills, and teaching practices.
                         </p>
-
-                        <span class="inline-flex items-center gap-2 mt-6 text-sm font-bold text-rose-600">
-                            Explore Creative Work
-                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        <span class="inline-block text-sm font-semibold text-indigo-600 group-hover:text-white mt-6">
+                            Explore →
                         </span>
                     </a>
 
-                    <a href="experiences/peer-teaching.html"
-                        class="group bg-white border border-gray-200 rounded-3xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-
-                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">
-                            Professional Growth
-                        </span>
-
-                        <h3 class="text-xl font-extrabold text-gray-900 mt-3">
-                            Peer Teaching
-                        </h3>
-
-                        <p class="text-gray-600 leading-relaxed mt-3">
-                            Micro-teaching, lesson delivery, peer feedback,
-                            questioning skills, and reflective improvement.
+                    <a href="semesters/semester-3.html" class="group bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:bg-indigo-600 hover:border-indigo-600 hover:-translate-y-1 transition duration-300">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-bold text-indigo-600 group-hover:text-indigo-200">03</span>
+                            <span class="text-xl text-slate-400 group-hover:text-white">↗</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white mt-8">Semester III</h3>
+                        <p class="text-sm text-slate-500 group-hover:text-indigo-100 leading-6 mt-3">
+                            Applying knowledge through activities and practice.
                         </p>
-
-                        <span class="inline-flex items-center gap-2 mt-6 text-sm font-bold text-indigo-600">
-                            Explore Peer Teaching
-                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        <span class="inline-block text-sm font-semibold text-indigo-600 group-hover:text-white mt-6">
+                            Explore →
                         </span>
                     </a>
+
+                    <a href="semesters/semester-4.html" class="group bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:bg-indigo-600 hover:border-indigo-600 hover:-translate-y-1 transition duration-300">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-bold text-indigo-600 group-hover:text-indigo-200">04</span>
+                            <span class="text-xl text-slate-400 group-hover:text-white">↗</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-white mt-8">Semester IV</h3>
+                        <p class="text-sm text-slate-500 group-hover:text-indigo-100 leading-6 mt-3">
+                            Bringing learning into real classroom experiences.
+                        </p>
+                        <span class="inline-block text-sm font-semibold text-indigo-600 group-hover:text-white mt-6">
+                            Explore →
+                        </span>
+                    </a>
+
                 </div>
             </div>
         </section>
 
-        <!-- Philosophy -->
-        <section class="py-20 md:py-28 bg-white">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
-                    My Teaching Philosophy
-                </span>
+        <!-- Teaching Philosophy -->
+        <section class="py-20 md:py-24 bg-slate-950 text-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
 
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3">
-                    Learning should be meaningful, inclusive, and connected to experience.
-                </h2>
+                    <div class="lg:col-span-7">
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-300">
+                            Teaching Philosophy
+                        </span>
 
-                <div class="w-12 h-1 bg-indigo-600 rounded-full mx-auto mt-6"></div>
+                        <h2 class="text-3xl md:text-5xl font-bold tracking-tight mt-4 leading-tight">
+                            Learning becomes meaningful when students are actively involved.
+                        </h2>
 
-                <p class="text-gray-600 text-lg md:text-xl leading-relaxed mt-7">
-                    I believe that effective teaching goes beyond delivering
-                    information. A teacher should understand learners, create
-                    opportunities for participation, encourage curiosity,
-                    connect concepts with experience, and continuously reflect
-                    on the learning process.
-                </p>
+                        <p class="text-slate-300 leading-8 text-lg mt-7 max-w-2xl">
+                            My teaching experiences have encouraged me to value patience, adaptability, creativity, communication, and continuous reflection. I believe that classroom experiences should help learners participate, understand concepts, and connect learning with their lives.
+                        </p>
+
+                        <a href="experiences/school-internship.html" class="inline-flex items-center gap-3 mt-8 px-7 py-3.5 bg-white text-slate-900 font-bold rounded-xl hover:bg-indigo-50 transition">
+                            View Teaching Practice
+                            <span>→</span>
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                        <div class="border border-slate-700 rounded-2xl p-6">
+                            <span class="text-indigo-300 text-sm font-bold">01</span>
+                            <h3 class="font-bold text-lg mt-8">Patience</h3>
+                            <p class="text-sm text-slate-400 leading-6 mt-2">Understanding learners and their individual needs.</p>
+                        </div>
+
+                        <div class="border border-slate-700 rounded-2xl p-6">
+                            <span class="text-teal-300 text-sm font-bold">02</span>
+                            <h3 class="font-bold text-lg mt-8">Creativity</h3>
+                            <p class="text-sm text-slate-400 leading-6 mt-2">Making learning engaging through meaningful resources.</p>
+                        </div>
+
+                        <div class="border border-slate-700 rounded-2xl p-6">
+                            <span class="text-rose-300 text-sm font-bold">03</span>
+                            <h3 class="font-bold text-lg mt-8">Adaptability</h3>
+                            <p class="text-sm text-slate-400 leading-6 mt-2">Responding thoughtfully to classroom situations.</p>
+                        </div>
+
+                        <div class="border border-slate-700 rounded-2xl p-6">
+                            <span class="text-amber-300 text-sm font-bold">04</span>
+                            <h3 class="font-bold text-lg mt-8">Reflection</h3>
+                            <p class="text-sm text-slate-400 leading-6 mt-2">Learning from every teaching experience.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section class="py-20 bg-slate-900 text-white">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <span class="text-sm font-semibold text-indigo-400 tracking-wide uppercase">
-                    Explore the Complete Portfolio
-                </span>
+        <!-- Portfolio Areas -->
+        <section class="py-20 md:py-24 bg-stone-50 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6">
 
-                <h2 class="text-3xl md:text-4xl font-extrabold mt-3">
-                    From Academic Foundations to Classroom Practice
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">Explore My Portfolio</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
+                        From academic learning to classroom practice.
+                    </h2>
+                    <p class="text-slate-600 leading-7 mt-5">
+                        Explore the experiences, activities, and teaching records that document my development as a student teacher.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5 mt-12">
+
+                    <a href="experiences/school-internship.html" class="group bg-white border border-slate-200 rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1 transition">
+                        <span class="text-xs font-bold uppercase tracking-widest text-teal-600">01</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-6">School Internship</h3>
+                        <p class="text-slate-500 leading-7 mt-3">
+                            Explore classroom teaching, school activities, professional responsibilities, and field experience.
+                        </p>
+                        <span class="inline-block text-sm font-bold text-indigo-600 mt-6 group-hover:translate-x-1 transition">
+                            View Experience →
+                        </span>
+                    </a>
+
+                    <a href="experiences/art-in-education.html" class="group bg-white border border-slate-200 rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1 transition">
+                        <span class="text-xs font-bold uppercase tracking-widest text-rose-600">02</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-6">Art in Education</h3>
+                        <p class="text-slate-500 leading-7 mt-3">
+                            Discover creative activities and practical work developed during the B.Ed programme.
+                        </p>
+                        <span class="inline-block text-sm font-bold text-indigo-600 mt-6 group-hover:translate-x-1 transition">
+                            View Activities →
+                        </span>
+                    </a>
+
+                    <a href="experiences/peer-teaching.html" class="group bg-white border border-slate-200 rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1 transition">
+                        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600">03</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-6">Peer Teaching</h3>
+                        <p class="text-slate-500 leading-7 mt-3">
+                            Explore teaching demonstrations, lesson practice, communication, and classroom skills.
+                        </p>
+                        <span class="inline-block text-sm font-bold text-indigo-600 mt-6 group-hover:translate-x-1 transition">
+                            View Practice →
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">My Journey</span>
+
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
+                    Learning, teaching, reflecting, growing.
                 </h2>
 
-                <p class="text-gray-400 text-lg leading-relaxed mt-5 max-w-2xl mx-auto">
-                    Explore the complete journey through four semesters,
-                    teaching practice, creative educational activities,
-                    school internship, and peer-teaching experiences.
+                <div class="w-10 h-1 bg-indigo-600 mt-5 mx-auto"></div>
+
+                <p class="text-lg text-slate-600 leading-8 mt-7">
+                    This portfolio represents my journey as a B.Ed student teacher and the experiences that continue to shape my understanding of education and teaching.
                 </p>
 
-                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="semesters/semester-1.html"
-                        class="px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-500 hover:-translate-y-1 transition-all duration-300">
-                        Start My Journey →
-                    </a>
-
-                    <a href="experiences/school-internship.html"
-                        class="px-8 py-4 bg-gray-800 text-white font-bold rounded-full hover:bg-gray-700 transition-all duration-300">
-                        View Teaching Experience →
-                    </a>
-                </div>
+                <a href="semesters/semester-1.html" class="inline-flex items-center gap-3 mt-8 px-7 py-3.5 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition">
+                    Begin the Journey
+                    <span>→</span>
+                </a>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div>
-                <h2>Shaik Afreen Abeda</h2>
-                <p>B.Ed Student Teacher</p>
-            </div>
+    <footer class="bg-slate-950 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h2 class="text-xl font-bold">Shaik Afreen Abeda</h2>
+                    <p class="text-sm text-slate-400 mt-1">B.Ed Student Teacher</p>
+                </div>
 
-            <p>© 2026 Shaik Afreen Abeda. All rights reserved.</p>
+                <p class="text-sm text-slate-500">© 2026 Shaik Afreen Abeda. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 
 </body>
-
 </html>
