@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --ink: #172033;
+    --muted: #667085;
+    --soft: #f5f7fa;
+    --line: #e5e7eb;
+    --accent: #5267b8;
+    --accent-dark: #3f529d;
+    --paper: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--soft);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.site-header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 0 24px;
+}
+
+.site-nav {
+    max-width: 1180px;
+    margin: auto;
+    height: 72px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,.92);
+    border: 1px solid rgba(255,255,255,.8);
+    box-shadow: 0 15px 40px rgba(23,32,51,.08);
+    border-radius: 18px;
+}
+
+.brand {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -.04em;
+}
+
+.brand span {
+    color: var(--accent);
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-link {
+    border: 0;
+    background: transparent;
+    color: #667085;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-arrow {
+    width: 15px;
+    height: 15px;
+    transition: .25s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -15px;
+    width: 210px;
+    padding: 8px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 18px 45px rgba(23,32,51,.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: .2s ease;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 11px 13px;
+    color: #475467;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: .2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f3fb;
+    color: var(--accent);
+}
+
+.mobile-menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.hero-section {
+    min-height: 760px;
+    padding: 160px 0 100px;
+    background:
+        radial-gradient(circle at 85% 25%, rgba(82,103,184,.12), transparent 30%),
+        linear-gradient(135deg, #f8f9fc 0%, #eef1f7 100%);
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 28px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero-label span {
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+}
+
+.hero-content h1 {
+    margin: 0;
+    max-width: 700px;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: .98;
+    letter-spacing: -.04em;
+    font-weight: 600;
+}
+
+.hero-content h1 strong {
+    display: block;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.college-name {
+    margin: 27px 0 0;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    margin-top: 32px;
+}
+
+.primary-button,
+.dark-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 23px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.primary-button {
+    color: white;
+    background: var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(82,103,184,.22);
+}
+
+.primary-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image-frame {
+    position: relative;
+    width: min(100%, 450px);
+    padding: 12px;
+    background: white;
+    box-shadow: 0 25px 70px rgba(23,32,51,.15);
+    transform: rotate(2deg);
+}
+
+.hero-image-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid #d9dde7;
+    pointer-events: none;
+}
+
+.hero-image-frame img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.hero-image-accent {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    right: -30px;
+    border: 1px solid rgba(82,103,184,.3);
+    z-index: -1;
+}
+
+.hero-image-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 5px 3px;
+    color: #667085;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.hero-image-caption span {
+    color: var(--accent);
+}
+
+.journey-section {
+    padding: 110px 0;
+    background: white;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.section-container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 28px;
+}
+
+.section-heading {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 30px;
+    max-width: 850px;
+    margin-bottom: 55px;
+}
+
+.section-number {
+    color: #c5cad5;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 9px;
+}
+
+.section-label {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.section-heading h2,
+.practice-content h2 {
+    margin: 8px 0 0;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -.035em;
+    font-weight: 600;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin-top: 20px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #dfe3ea;
+    border: 1px solid #dfe3ea;
+}
+
+.semester-card {
+    position: relative;
+    min-height: 270px;
+    padding: 27px;
+    background: white;
+    color: var(--ink);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.semester-card:hover {
+    background: var(--ink);
+    color: white;
+    transform: translateY(-6px);
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(23,32,51,.16);
+}
+
+.semester-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.semester-number {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.semester-card:hover .semester-number {
+    color: #aeb9e7;
+}
+
+.semester-arrow {
+    font-size: 20px;
+    color: #a3a9b5;
+    transition: .3s ease;
+}
+
+.semester-card:hover .semester-arrow {
+    color: white;
+    transform: translate(3px,-3px);
+}
+
+.semester-card h3 {
+    margin-top: 70px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.semester-card p {
+    max-width: 220px;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.semester-card:hover p {
+    color: #c8ceda;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.semester-card:hover .card-link {
+    color: white;
+}
+
+.practice-section {
+    padding: 110px 0;
+    background: #f4f5f8;
+}
+
+.practice-layout {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.practice-content p {
+    max-width: 590px;
+    color: var(--muted);
+    line-height: 1.85;
+    margin-top: 22px;
+}
+
+.dark-button {
+    margin-top: 28px;
+    color: white;
+    background: var(--ink);
+    border-radius: 9px;
+}
+
+.dark-button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.practice-card {
+    min-height: 205px;
+    padding: 28px;
+    background: white;
+    border: 1px solid #e1e4ea;
+    transition: .3s ease;
+}
+
+.practice-card:hover {
+    border-color: #c2c9dc;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(23,32,51,.08);
+}
+
+.practice-card span {
+    color: #a5acb9;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.practice-card h3 {
+    margin-top: 48px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.practice-card p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.site-footer {
+    background: #141a28;
+    color: white;
+}
+
+.footer-inner {
+    max-width: 1180px;
+    margin: auto;
+    padding: 42px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-inner h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer-inner p {
+    margin: 5px 0 0;
+    color: #98a1b2;
+    font-size: 13px;
+}
+
+.footer-inner > p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-menu {
+        max-width: 1180px;
+        margin: 8px auto 0;
+        padding: 10px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 15px 35px rgba(23,32,51,.1);
+    }
+
+    .mobile-menu.open {
+        display: block;
+    }
+
+    .mobile-link,
+    .mobile-semester-button {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border: 0;
+        background: transparent;
+        color: #475467;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .mobile-link:hover,
+    .mobile-link.active,
+    .mobile-semester-button:hover {
+        background: #f1f3fb;
+        color: var(--accent);
+    }
+
+    .mobile-semester-menu {
+        display: none;
+        padding: 4px 0 4px 15px;
+    }
+
+    .mobile-semester-menu:not(.hidden) {
+        display: block;
+    }
+
+    .mobile-semester-menu a {
+        display: block;
+        padding: 9px 14px;
+        color: #667085;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .mobile-semester-menu a:hover {
+        color: var(--accent);
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+
+    .hero-image-frame {
+        max-width: 390px;
+    }
+
+    .semester-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .practice-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        top: 12px;
+        padding: 0 12px;
+    }
+
+    .site-nav {
+        height: 62px;
+        padding: 0 19px;
+    }
+
+    .hero-section {
+        padding: 125px 0 70px;
+        min-height: auto;
+    }
+
+    .hero-container,
+    .section-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .college-name {
+        line-height: 1.6;
+    }
+
+    .hero-image-frame {
+        transform: rotate(1deg);
+    }
+
+    .journey-section,
+    .practice-section {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 35px;
+    }
+
+    .semester-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-card {
+        min-height: 230px;
+    }
+
+    .semester-card h3 {
+        margin-top: 50px;
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-card {
+        min-height: 180px;
+    }
+
+    .practice-card h3 {
+        margin-top: 35px;
+    }
+
+    .footer-inner {
+        padding: 35px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

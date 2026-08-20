@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester II - Shaik Afreen Abeda</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-slate-50 text-gray-900">
+
+    <!-- Navbar -->
+    <header class="fixed top-4 left-0 w-full z-50 flex justify-center px-4">
+        <nav class="w-full max-w-6xl bg-white/70 backdrop-blur-lg shadow-lg border border-white/40 rounded-full px-5 md:px-8 py-3.5">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
+                    Afreen
+                </a>
+
+                <div class="hidden md:flex items-center gap-7">
+                    <a href="../index.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Home</a>
+
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-sm font-semibold text-indigo-600 transition">
+                            Semesters
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="w-52 bg-white rounded-2xl shadow-xl border border-gray-200 p-2">
+                                <a href="semester-1.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                    Semester I
+                                </a>
+                                <a href="semester-2.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50">
+                                    Semester II
+                                </a>
+                                <a href="semester-3.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                    Semester III
+                                </a>
+                                <a href="semester-4.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                    Semester IV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="../experiences/school-internship.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
+                        Internship
+                    </a>
+                </div>
+
+                <button id="menuButton" class="md:hidden p-2 rounded-full hover:bg-gray-100 transition" aria-label="Open navigation menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-200/70 mt-3">
+                <div class="flex flex-col gap-1">
+                    <a href="../index.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">
+                        Home
+                    </a>
+                    <a href="../journey.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">
+                        Academics
+                    </a>
+                    <a href="../experiences/school-internship.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">
+                        Internship
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Page Header -->
+        <section class="pt-32 pb-16 bg-slate-50 border-b border-gray-200">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Semester II</h1>
+                <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Advancing pedagogical skills, creative projects, and active classroom teaching.
+                </p>
+            </div>
+        </section>
+
+        <!-- Orientation -->
+        <section class="py-16 md:py-24 bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="order-1 flex flex-col space-y-4">
+                        <span class="text-sm font-semibold text-indigo-600 tracking-wide uppercase">Setting the Stage</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                            Semester II Orientation
+                        </h2>
+                        <div class="w-12 h-1 bg-indigo-600 rounded-full mt-2"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed mt-6">
+                            The orientation for Semester II provided a clear roadmap for the advanced challenges ahead.
+                            We transitioned from foundational theories to practical application, focusing heavily on
+                            creative lesson planning and preparing for our upcoming school internships.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            It was a crucial session that aligned our cohort's goals and set expectations for the
+                            intensive pedagogy and art-in-education projects we would be tackling.
+                        </p>
+                    </div>
+
+                    <div class="order-2 grid grid-cols-2 gap-4 sm:gap-6">
+                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                            <img src="../assets/images/semester-2/orientations2.jpg" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" alt="Instructor leading orientation">
+                        </div>
+                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100 mt-6 sm:mt-12">
+                            <img src="../assets/images/semester-2/sem2orentation.jpg" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" alt="Students attending orientation">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biological Science -->
+        <section class="py-16 md:py-24 bg-slate-50 border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="flex flex-col space-y-4">
+                        <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-2">
+                            BS
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+                            Content cum pedagogy of Biological Science
+                        </h2>
+                        <div class="w-12 h-1 bg-indigo-600 rounded-full mt-2"></div>
+                        <p class="text-gray-700 mt-4 leading-relaxed text-lg">
+                            In Semester II, the focus shifted towards advanced teaching methodologies. I presented
+                            complex topics like the "Basic Unit of Life" and cell structures using a combination of
+                            detailed visual charts and live chalkboard demonstrations to keep students engaged.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                            <img src="../assets/images/semester-2/bs1.jpeg" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" alt="Chalkboard teaching biology">
+                        </div>
+                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100 mt-6 sm:mt-12">
+                            <img src="../assets/images/semester-2/bs2.jpeg" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" alt="Chart presentation biology">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hindi Pedagogy -->
+        <section class="py-16 md:py-24 bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="grid grid-cols-2 gap-4 sm:gap-6 order-2 md:order-1">
+                        <div class="flex flex-col gap-4 sm:gap-6">
+                            <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                                <img src="../assets/images/semester-2/hindi1.jpeg" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" alt="Classroom group presentation">
+                            </div>
+                            <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-white p-2">
+                                <img src="../assets/images/semester-2/hindi.jpeg" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700" alt="Hindi Environmental Posters">
+                            </div>
+                        </div>
+
+                        <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100 mt-8 sm:mt-16">
+                            <img src="../assets/images/semester-2/hindi4.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Importance of Trees Chart">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-4 order-1 md:order-2">
+                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-2">
+                            H
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
+                            Content cum pedagogy of Hindi
+                        </h2>
+                        <div class="w-12 h-1 bg-purple-600 rounded-full mt-2"></div>
+                        <p class="text-gray-700 mt-4 leading-relaxed text-lg">
+                            Language pedagogy expanded beyond the textbook. I collaborated with peers for dynamic group
+                            presentations and utilized creative environmental campaigns to integrate social awareness
+                            with language learning.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Projects like the <em>"Ped Lagao, Dhara Bachao"</em> (Plant Trees, Save the Earth)
+                            initiative and the "Importance of Trees" charts helped students connect Hindi vocabulary
+                            with real-world ecological concepts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Art in Education -->
+        <section class="py-16 md:py-24 bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-3xl mb-12">
+                    <span class="text-sm font-semibold text-rose-600 tracking-wide uppercase">Creative Project</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Art in Education Record</h2>
+                    <div class="w-12 h-1 bg-rose-600 rounded-full mt-4"></div>
+                </div>
+
+                <!-- Workshop -->
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-16 bg-slate-50 p-8 rounded-3xl border border-gray-100 shadow-sm">
+                    <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+                        <img src="../assets/images/semester-2/artineduorentation.jpeg" class="w-full aspect-square object-cover rounded-2xl shadow-md" alt="Instructor teaching art techniques">
+                        <img src="../assets/images/semester-2/artineduorientation2.jpeg" class="w-full aspect-square object-cover rounded-2xl shadow-md mt-6" alt="Students practicing glass painting">
+                    </div>
+
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-bold text-gray-900">Hands-on Workshops</h3>
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            Before creating our final teaching aids, we participated in practical workshops. Guided by
+                            our instructors, we explored various mediums like glass painting, watercolors, and 3D
+                            modeling.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            These hands-on sessions equipped us with the skills to blend our pedagogy subjects with
+                            creative expression, resulting in a diverse portfolio of educational art.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Art Gallery -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu.jpeg" alt="Hindi Punctuation Craft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Hindi Punctuation Sun</h3>
+                            <p class="text-xs text-gray-500 mt-1">Interactive craft for teaching "Viram Chinh".</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu2.jpeg" alt="Butterfly Life Cycle Clay Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Butterfly Life Cycle</h3>
+                            <p class="text-xs text-gray-500 mt-1">3D clay modeling for Biological Science.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu3.jpeg" alt="Animal Cell Craft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Animal Cell Anatomy</h3>
+                            <p class="text-xs text-gray-500 mt-1">Tactile material art for identifying cell parts.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu5.jpeg" alt="Plant Cell Pen Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Plant Cell Diagram</h3>
+                            <p class="text-xs text-gray-500 mt-1">Detailed pen and ink educational illustration.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu8.jpeg" alt="Cheek Cell Observation Flowchart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Lab Process Flowchart</h3>
+                            <p class="text-xs text-gray-500 mt-1">Creative ladder chart for observing cheek cells.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu10.jpeg" alt="Nucleus Material Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Nucleus Structure</h3>
+                            <p class="text-xs text-gray-500 mt-1">Mixed material art displaying cellular biology.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu11.jpeg" alt="Paramecium Pencil Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Paramecium Anatomy</h3>
+                            <p class="text-xs text-gray-500 mt-1">Precision pencil art of a unicellular organism.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu12.jpeg" alt="Rhizopus Painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Rhizopus Painting</h3>
+                            <p class="text-xs text-gray-500 mt-1">Watercolor representation of fungi structure.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/artinedu14.jpeg" alt="Bacteria Shapes Painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Bacterial Structures</h3>
+                            <p class="text-xs text-gray-500 mt-1">Painting art identifying Bacillus and Coccus shapes.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/poster2.jpeg" alt="Hum Panchi Unmukt Gagan Ke Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Visual Literature</h3>
+                            <p class="text-xs text-gray-500 mt-1">Pastel art for the poem "Hum Panchi Unmukt Gagan Ke".</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-slate-50 border border-gray-200 aspect-[4/5]">
+                        <img src="../assets/images/semester-2/poster1.jpeg" alt="Pastel Landscape Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 border-t border-gray-100 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-gray-900">Landscape Composition</h3>
+                            <p class="text-xs text-gray-500 mt-1">Soft pastel techniques exploring color and nature.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship CTA -->
+        <section class="py-20 bg-slate-900 text-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-extrabold">Putting Theory into Practice</h2>
+                <p class="text-gray-400 mt-4 text-lg">
+                    With the foundational knowledge from Semester I and the creative pedagogical tools developed in
+                    Semester II, the next step was entering the real classroom.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="semester-1.html" class="px-8 py-4 bg-gray-800 text-white font-bold rounded-full hover:bg-gray-700 transition-all duration-300">
+                        ← Back to Semester I
+                    </a>
+                    <a href="../experiences/school-internship.html" class="px-8 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-500 hover:-translate-y-1 transition-all duration-300">
+                        View School Internship →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h2 class="text-xl font-bold">Shaik Afreen Abeda</h2>
+                    <p class="text-sm text-gray-400 mt-1">B.Ed Student Teacher</p>
+                </div>
+                <p class="text-sm text-gray-500">© 2026 Shaik Afreen Abeda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

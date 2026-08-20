@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Afreen Abeda | B.Ed Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="index.html" class="brand">Afreen<span>.</span></a>
+
+            <div class="desktop-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-button">
+                        Semesters
+                        <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <a href="semesters/semester-1.html">Semester I</a>
+                        <a href="semesters/semester-2.html">Semester II</a>
+                        <a href="semesters/semester-3.html">Semester III</a>
+                        <a href="semesters/semester-4.html">Semester IV</a>
+                    </div>
+                </div>
+
+                <a href="experiences/school-internship.html" class="nav-link">Internship</a>
+            </div>
+
+            <button id="menuButton" class="mobile-menu-button" aria-label="Open navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="index.html" class="mobile-link active">Home</a>
+
+            <button id="semesterButton" class="mobile-link mobile-semester-button">
+                <span>Semesters</span>
+                <svg id="semesterArrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <div id="semesterMenu" class="mobile-semester-menu">
+                <a href="semesters/semester-1.html">Semester I</a>
+                <a href="semesters/semester-2.html">Semester II</a>
+                <a href="semesters/semester-3.html">Semester III</a>
+                <a href="semesters/semester-4.html">Semester IV</a>
+            </div>
+
+            <a href="experiences/school-internship.html" class="mobile-link">Internship</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span></span>
+                        B.Ed Student Teacher
+                    </div>
+
+                    <h1>
+                        Hi, I'm
+                        <strong>Shaik Afreen Abeda.</strong>
+                    </h1>
+
+                    <p class="college-name">
+                        R.G.R SIDDHANTHI COLLEGE OF EDUCATION
+                    </p>
+
+                    <p class="hero-description">
+                        My teaching practice has been a challenging yet rewarding journey that has allowed me to connect theoretical knowledge with real classroom experiences. Through each experience, I have learned to understand diverse student needs, develop effective teaching strategies, and reflect on my own practice.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="semesters/semester-1.html" class="primary-button">
+                            Explore My Journey
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-frame">
+                        <div class="hero-image-accent"></div>
+                        <img src="assets/images/semester-1/seminar1.jpeg" alt="Shaik Afreen Abeda">
+                        <div class="hero-image-caption">
+                            <span>01</span>
+                            Student Teacher Portfolio
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Journey -->
+        <section class="journey-section" id="journey">
+            <div class="section-container">
+                <div class="section-heading">
+                    <div class="section-number">01</div>
+                    <div>
+                        <span class="section-label">My Academic Journey</span>
+                        <h2>Four Semesters, One Journey</h2>
+                        <p>
+                            Each semester has been an important step in developing my knowledge, skills, confidence, and understanding of the teaching profession.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="semester-grid">
+                    <a href="semesters/semester-1.html" class="semester-card">
+                        <div class="semester-top">
+                            <span class="semester-number">01</span>
+                            <span class="semester-arrow">↗</span>
+                        </div>
+                        <h3>Semester I</h3>
+                        <p>Building the foundation of my B.Ed journey.</p>
+                        <span class="card-link">View Semester</span>
+                    </a>
+
+                    <a href="semesters/semester-2.html" class="semester-card">
+                        <div class="semester-top">
+                            <span class="semester-number">02</span>
+                            <span class="semester-arrow">↗</span>
+                        </div>
+                        <h3>Semester II</h3>
+                        <p>Developing knowledge, skills, and teaching practices.</p>
+                        <span class="card-link">View Semester</span>
+                    </a>
+
+                    <a href="semesters/semester-3.html" class="semester-card">
+                        <div class="semester-top">
+                            <span class="semester-number">03</span>
+                            <span class="semester-arrow">↗</span>
+                        </div>
+                        <h3>Semester III</h3>
+                        <p>Applying knowledge through activities and practice.</p>
+                        <span class="card-link">View Semester</span>
+                    </a>
+
+                    <a href="semesters/semester-4.html" class="semester-card">
+                        <div class="semester-top">
+                            <span class="semester-number">04</span>
+                            <span class="semester-arrow">↗</span>
+                        </div>
+                        <h3>Semester IV</h3>
+                        <p>Bringing learning into real classroom experiences.</p>
+                        <span class="card-link">View Semester</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Practice -->
+        <section class="practice-section">
+            <div class="section-container">
+                <div class="practice-layout">
+                    <div class="practice-content">
+                        <span class="section-label">Teaching Practice</span>
+                        <h2>Learning beyond the classroom</h2>
+
+                        <p>
+                            Teaching practice has given me the opportunity to experience the realities of a classroom, interact with learners, plan lessons, use teaching aids, and reflect on my approach to teaching.
+                        </p>
+
+                        <p>
+                            Every classroom experience has contributed to my growth and helped me understand that effective teaching requires patience, adaptability, creativity, and continuous reflection.
+                        </p>
+
+                        <a href="experiences/school-internship.html" class="dark-button">
+                            Explore Teaching Practice
+                            <span>→</span>
+                        </a>
+                    </div>
+
+                    <div class="practice-grid">
+                        <div class="practice-card">
+                            <span>01</span>
+                            <h3>Lesson Planning</h3>
+                            <p>Planning meaningful and structured learning experiences.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <span>02</span>
+                            <h3>Classroom Management</h3>
+                            <p>Understanding learners and creating a positive environment.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <span>03</span>
+                            <h3>Teaching Aids</h3>
+                            <p>Using creative resources to make learning engaging.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <span>04</span>
+                            <h3>Reflection</h3>
+                            <p>Learning from every classroom experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <h2>Shaik Afreen Abeda</h2>
+                <p>B.Ed Student Teacher</p>
+            </div>
+
+            <p>© 2026 Shaik Afreen Abeda. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
