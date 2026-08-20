@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semester III - Shaik Afreen Abeda</title>
+    <link rel="icon" type="image/png" href="../assets/icones/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -13,64 +14,82 @@
 
     <!-- Navbar -->
     <header class="fixed top-4 left-0 w-full z-50 flex justify-center px-4">
-        <nav class="w-full max-w-6xl bg-white/70 backdrop-blur-lg shadow-lg border border-white/40 rounded-full px-5 md:px-8 py-3.5">
+        <nav
+            class="w-full max-w-6xl bg-white/70 backdrop-blur-lg shadow-lg border border-white/40 rounded-full px-5 md:px-8 py-3.5">
             <div class="flex items-center justify-between">
-                <a href="../index.html" class="text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
-                    Afreen
+                <a href="../index.html"
+                    class="flex items-center gap-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
+                    <img src="../assets/icones/icon.png" alt="SAA Logo"
+                        class="w-9 h-9 rounded-full object-cover shadow-sm ring-1 ring-gray-200">
+                    <span>Afreen</span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-7">
-                    <a href="../index.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
+                    <a href="../index.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
                         Home
                     </a>
 
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-sm font-semibold text-indigo-600 transition">
                             Semesters
-                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
 
-                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <div class="w-52 bg-white rounded-2xl shadow-xl border border-gray-200 p-2">
-                                <a href="semester-1.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semester-1.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester I
                                 </a>
-                                <a href="semester-2.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semester-2.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester II
                                 </a>
-                                <a href="semester-3.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50">
+                                <a href="semester-3.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-indigo-600 bg-indigo-50">
                                     Semester III
                                 </a>
-                                <a href="semester-4.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semester-4.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester IV
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="../experiences/school-internship.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
+                    <a href="../experiences/school-internship.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
                         Internship
                     </a>
                 </div>
 
-                <button id="menuButton" class="md:hidden p-2 rounded-full hover:bg-gray-100 transition" aria-label="Open navigation menu" aria-expanded="false">
+                <button id="menuButton" class="md:hidden p-2 rounded-full hover:bg-gray-100 transition"
+                    aria-label="Open navigation menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
 
             <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-200/70 mt-3">
                 <div class="flex flex-col gap-1">
-                    <a href="../index.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">
+                    <a href="../index.html"
+                        class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">
                         Home
                     </a>
-                    <a href="../journey.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">
+                    <a href="../journey.html"
+                        class="px-4 py-2.5 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">
                         Academics
                     </a>
-                    <a href="../experiences/school-internship.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">
+                    <a href="../experiences/school-internship.html"
+                        class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">
                         Internship
                     </a>
                 </div>
@@ -114,7 +133,8 @@
                     <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100">
                         <img src="../assets/images/semester-3/bio.jpeg" alt="Teaching Structure of Eye"
                             class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h3 class="text-white font-bold text-lg">
                                 Anatomy Diagrams
                             </h3>
@@ -127,7 +147,8 @@
                     <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 lg:mt-12">
                         <img src="../assets/images/semester-3/bio1.jpeg" alt="ICT Lesson Sex Determination"
                             class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h3 class="text-white font-bold text-lg">
                                 ICT Integration
                             </h3>
@@ -140,7 +161,8 @@
                     <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100">
                         <img src="../assets/images/semester-3/bio2.jpeg" alt="Teaching Heredity"
                             class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h3 class="text-white font-bold text-lg">
                                 Problem Solving
                             </h3>
@@ -158,7 +180,8 @@
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid md:grid-cols-12 gap-12 items-center">
                     <div class="md:col-span-5 flex flex-col space-y-4 order-2 md:order-1">
-                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-2">
+                        <div
+                            class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-2">
                             H
                         </div>
                         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">
@@ -213,10 +236,12 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
                         <img src="../assets/images/semester-3/edutripduringinternship.jpeg" alt="Botanical Garden Trip"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h3 class="text-white font-bold text-xl">
                                 Botanical Garden Tour
                             </h3>
@@ -226,10 +251,12 @@
                         </div>
                     </div>
 
-                    <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip.jpeg" alt="Outdoor Event at Chandrayangutta"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h3 class="text-white font-bold text-xl">
                                 Community Learning
                             </h3>
@@ -239,10 +266,12 @@
                         </div>
                     </div>
 
-                    <div class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip1.jpeg" alt="Group interaction at educational event"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h3 class="text-white font-bold text-xl">
                                 Collaborative Learning
                             </h3>
@@ -281,7 +310,8 @@
                         <img src="../assets/images/semester-3/edutripduringinternship.jpeg"
                             alt="Botanical Garden Educational Tour"
                             class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-6">
                             <h4 class="text-white font-bold text-lg">
                                 Botanical Garden Tour
                             </h4>
@@ -316,10 +346,12 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip.jpeg" alt="Outdoor Community Learning"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
                             <h4 class="text-white font-bold text-base">
                                 Community Engagement
                             </h4>
@@ -329,10 +361,12 @@
                         </div>
                     </div>
 
-                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip1.jpeg" alt="Group discussion at field site"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
                             <h4 class="text-white font-bold text-base">
                                 Cohort Collaboration
                             </h4>
@@ -342,10 +376,12 @@
                         </div>
                     </div>
 
-                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip2.jpeg" alt="MV Foundation Presentation"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
                             <h4 class="text-white font-bold text-base">
                                 Foundation Briefing
                             </h4>
@@ -355,10 +391,12 @@
                         </div>
                     </div>
 
-                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip3.jpeg" alt="Speaker at MV Foundation"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
                             <h4 class="text-white font-bold text-base">
                                 Expert Insights
                             </h4>
@@ -368,10 +406,12 @@
                         </div>
                     </div>
 
-                    <div class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-md bg-white border border-gray-200 aspect-[4/5]">
                         <img src="../assets/images/semester-3/trip4.jpeg" alt="Session on educational implementation"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent p-5">
                             <h4 class="text-white font-bold text-base">
                                 Session Review
                             </h4>

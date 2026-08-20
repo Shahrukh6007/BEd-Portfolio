@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Journey - Shaik Afreen Abeda</title>
+    <link rel="icon" type="image/png" href="assets/icones/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,8 +16,11 @@
     <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <nav class="max-w-6xl mx-auto px-6">
             <div class="h-20 flex items-center justify-between">
-                <a href="index.html" class="text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
-                    Afreen
+                <a href="index.html"
+                    class="flex items-center gap-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
+                    <img src="assets/icones/icon.png" alt="SAA Logo"
+                        class="w-9 h-9 rounded-full object-cover shadow-sm ring-1 ring-gray-200">
+                    <span>Afreen</span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-8">
@@ -27,44 +31,55 @@
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-sm font-semibold text-indigo-600">
                             Semesters
-                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
 
-                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <div class="w-52 bg-white rounded-2xl shadow-xl border border-gray-100 p-2">
-                                <a href="semesters/semester-1.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semesters/semester-1.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester I
                                 </a>
-                                <a href="semesters/semester-2.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semesters/semester-2.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester II
                                 </a>
-                                <a href="semesters/semester-3.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semesters/semester-3.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester III
                                 </a>
-                                <a href="semesters/semester-4.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+                                <a href="semesters/semester-4.html"
+                                    class="block px-4 py-3 rounded-xl text-sm font-semibold text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
                                     Semester IV
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="experiences/school-internship.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
+                    <a href="experiences/school-internship.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">
                         Internship
                     </a>
                 </div>
 
-                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Open navigation menu">
+                <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+                    aria-label="Open navigation menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
 
             <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 py-4">
                 <div class="flex flex-col gap-1">
-                    <a href="index.html" class="px-4 py-3 rounded-xl text-sm font-semibold text-gray-600 hover:bg-gray-50">
+                    <a href="index.html"
+                        class="px-4 py-3 rounded-xl text-sm font-semibold text-gray-600 hover:bg-gray-50">
                         Home
                     </a>
 
@@ -74,22 +89,27 @@
                         </p>
 
                         <div class="pl-4">
-                            <a href="semesters/semester-1.html" class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
+                            <a href="semesters/semester-1.html"
+                                class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
                                 Semester I
                             </a>
-                            <a href="semesters/semester-2.html" class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
+                            <a href="semesters/semester-2.html"
+                                class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
                                 Semester II
                             </a>
-                            <a href="semesters/semester-3.html" class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
+                            <a href="semesters/semester-3.html"
+                                class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
                                 Semester III
                             </a>
-                            <a href="semesters/semester-4.html" class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
+                            <a href="semesters/semester-4.html"
+                                class="block px-4 py-2.5 rounded-xl text-sm text-gray-600 hover:bg-indigo-50 hover:text-indigo-600">
                                 Semester IV
                             </a>
                         </div>
                     </div>
 
-                    <a href="experiences/school-internship.html" class="px-4 py-3 rounded-xl text-sm font-semibold text-gray-600 hover:bg-gray-50">
+                    <a href="experiences/school-internship.html"
+                        class="px-4 py-3 rounded-xl text-sm font-semibold text-gray-600 hover:bg-gray-50">
                         Internship
                     </a>
                 </div>
@@ -103,17 +123,20 @@
         <section class="pt-32 pb-20 md:pt-40 md:pb-24 bg-slate-50">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="max-w-3xl">
-                    <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider">
+                    <span
+                        class="inline-flex items-center px-3 py-1.5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider">
                         Academic Journey
                     </span>
 
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight mt-5">
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight mt-5">
                         Four semesters.
                         <span class="text-indigo-600">One journey.</span>
                     </h1>
 
                     <p class="text-lg md:text-xl text-gray-600 leading-8 mt-6 max-w-2xl">
-                        Explore the four semesters of my B.Ed program, tracing my progression from foundational educational theories to advanced pedagogy and practical experiences.
+                        Explore the four semesters of my B.Ed program, tracing my progression from foundational
+                        educational theories to advanced pedagogy and practical experiences.
                     </p>
                 </div>
             </div>
@@ -135,10 +158,12 @@
 
                         <!-- Semester I -->
                         <a href="semesters/semester-1.html" class="group block">
-                            <div class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
                                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
                                     <div class="flex items-start gap-5">
-                                        <div class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
+                                        <div
+                                            class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
                                             I
                                         </div>
 
@@ -147,7 +172,8 @@
                                                 Phase 01
                                             </span>
 
-                                            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
+                                            <h2
+                                                class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
                                                 Semester I
                                             </h2>
                                         </div>
@@ -159,17 +185,20 @@
                                 </div>
 
                                 <p class="text-gray-600 leading-7 mt-6 md:ml-17">
-                                    Establishing core educational principles, child development theories, contemporary perspectives on Indian education, and initial micro-teaching frameworks.
+                                    Establishing core educational principles, child development theories, contemporary
+                                    perspectives on Indian education, and initial micro-teaching frameworks.
                                 </p>
                             </div>
                         </a>
 
                         <!-- Semester II -->
                         <a href="semesters/semester-2.html" class="group block">
-                            <div class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
                                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
                                     <div class="flex items-start gap-5">
-                                        <div class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
+                                        <div
+                                            class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
                                             II
                                         </div>
 
@@ -178,7 +207,8 @@
                                                 Phase 02
                                             </span>
 
-                                            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
+                                            <h2
+                                                class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
                                                 Semester II
                                             </h2>
                                         </div>
@@ -190,17 +220,21 @@
                                 </div>
 
                                 <p class="text-gray-600 leading-7 mt-6 md:ml-17">
-                                    Deep dive into pedagogy subjects including <strong>Content cum pedagogy of Biological Science</strong> and <strong>Content cum pedagogy of Hindi</strong>, alongside creative Art in Education projects.
+                                    Deep dive into pedagogy subjects including <strong>Content cum pedagogy of
+                                        Biological Science</strong> and <strong>Content cum pedagogy of Hindi</strong>,
+                                    alongside creative Art in Education projects.
                                 </p>
                             </div>
                         </a>
 
                         <!-- Semester III -->
                         <a href="semesters/semester-3.html" class="group block">
-                            <div class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
                                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
                                     <div class="flex items-start gap-5">
-                                        <div class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
+                                        <div
+                                            class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
                                             III
                                         </div>
 
@@ -209,7 +243,8 @@
                                                 Phase 03
                                             </span>
 
-                                            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
+                                            <h2
+                                                class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
                                                 Semester III
                                             </h2>
                                         </div>
@@ -221,17 +256,20 @@
                                 </div>
 
                                 <p class="text-gray-600 leading-7 mt-6 md:ml-17">
-                                    Immersive classroom teaching practice, ICT integration using projectors, botanical garden study tours, and community outreach visits to the MV Foundation.
+                                    Immersive classroom teaching practice, ICT integration using projectors, botanical
+                                    garden study tours, and community outreach visits to the MV Foundation.
                                 </p>
                             </div>
                         </a>
 
                         <!-- Semester IV -->
                         <a href="semesters/semester-4.html" class="group block">
-                            <div class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
+                            <div
+                                class="border border-gray-200 rounded-3xl p-7 md:p-9 hover:border-indigo-200 hover:shadow-xl transition-all duration-300">
                                 <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
                                     <div class="flex items-start gap-5">
-                                        <div class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
+                                        <div
+                                            class="shrink-0 w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-extrabold">
                                             IV
                                         </div>
 
@@ -240,7 +278,8 @@
                                                 Phase 04
                                             </span>
 
-                                            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
+                                            <h2
+                                                class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-1 group-hover:text-indigo-600 transition">
                                                 Semester IV
                                             </h2>
                                         </div>
@@ -252,7 +291,8 @@
                                 </div>
 
                                 <p class="text-gray-600 leading-7 mt-6 md:ml-17">
-                                    The culminating phase featuring final practical examinations observed by external examiners, environmental science projects, and public health community visits.
+                                    The culminating phase featuring final practical examinations observed by external
+                                    examiners, environmental science projects, and public health community visits.
                                 </p>
                             </div>
                         </a>
@@ -275,10 +315,12 @@
                     </h2>
 
                     <p class="text-gray-400 text-lg leading-8 mt-5">
-                        See how these theoretical semesters translated into hands-on teaching, assemblies, and school management during my professional school internship.
+                        See how these theoretical semesters translated into hands-on teaching, assemblies, and school
+                        management during my professional school internship.
                     </p>
 
-                    <a href="experiences/school-internship.html" class="inline-flex items-center mt-8 px-7 py-3.5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300">
+                    <a href="experiences/school-internship.html"
+                        class="inline-flex items-center mt-8 px-7 py-3.5 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-500 hover:-translate-y-0.5 transition-all duration-300">
                         View School Internship Experience →
                     </a>
                 </div>
