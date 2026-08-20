@@ -8,86 +8,61 @@
     <link rel="icon" type="image/png" href="../assets/icones/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 
-<body class="bg-stone-50 text-slate-900">
+<body class="bg-slate-50 text-gray-900">
 
-    <!-- Navbar -->
-    <header class="site-header">
-        <nav class="site-nav">
-            <a href="../index.html"
-                class="flex items-center gap-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
-                <img src="../assets/icones/icon.png" alt="SAA Logo"
-                    class="w-9 h-9 rounded-full object-cover shadow-sm ring-1 ring-gray-200">
-                <span>Afreen</span>
-            </a>
-
-            <div class="desktop-nav">
-                <a href="../index.html" class="nav-link">Home</a>
-
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-button active">
-                        Semesters
-                        <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <div class="dropdown-menu">
-                        <a href="semester-1.html" class="active">Semester I</a>
-                        <a href="semester-2.html">Semester II</a>
-                        <a href="semester-3.html">Semester III</a>
-                        <a href="semester-4.html">Semester IV</a>
-                    </div>
+    <!-- Standard Global Navbar -->
+    <header class="fixed top-4 left-0 w-full z-50 flex justify-center px-4">
+        <nav class="w-full max-w-6xl bg-white/70 backdrop-blur-lg shadow-lg border border-white/40 rounded-full px-5 md:px-8 py-3.5">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="flex items-center gap-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 hover:text-indigo-600 transition">
+                    <img src="../assets/icones/icon.png" alt="SAA Logo" class="w-9 h-9 rounded-full object-cover shadow-sm ring-1 ring-gray-200">
+                    <span>Afreen</span>
+                </a>
+                <div class="hidden md:flex items-center gap-7">
+                    <a href="../index.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Home</a>
+                    <a href="../journey.html" class="text-sm font-semibold text-indigo-600 transition">Academics</a>
+                    <a href="../experiences/school-internship.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Internship</a>
+                    <a href="../experiences/art-in-education.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Art in Education</a>
+                    <a href="../experiences/peer-teaching.html" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Peer Teaching</a>
                 </div>
-
-                <a href="../experiences/school-internship.html" class="nav-link">Internship</a>
+                <button id="menuButton" class="md:hidden p-2 rounded-full hover:bg-gray-100 transition" aria-label="Open navigation menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
-
-            <button id="menuButton" class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2 border-t border-gray-200/70 mt-3">
+                <div class="flex flex-col gap-1">
+                    <a href="../index.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">Home</a>
+                    <a href="../journey.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50">Academics</a>
+                    <a href="../experiences/school-internship.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">Internship</a>
+                    <a href="../experiences/art-in-education.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">Art in Education</a>
+                    <a href="../experiences/peer-teaching.html" class="px-4 py-2.5 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50">Peer Teaching</a>
+                </div>
+            </div>
         </nav>
-
-        <!-- mobile menu -->
-        <div id="mobileMenu" class="mobile-menu">
-            <a href="../index.html" class="mobile-link">Home</a>
-
-            <button id="semesterButton" class="mobile-link mobile-semester-button">
-                <span>Semesters</span>
-                <svg id="semesterArrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-
-            <div id="semesterMenu" class="mobile-semester-menu">
-                <a href="semester-1.html" class="active">Semester I</a>
-                <a href="semester-2.html">Semester II</a>
-                <a href="semester-3.html">Semester III</a>
-                <a href="semester-4.html">Semester IV</a>
-            </div>
-
-            <a href="../experiences/school-internship.html" class="mobile-link">Internship</a>
-        </div>
     </header>
 
     <main>
 
         <!-- Header -->
-        <section class="pt-36 pb-20 bg-white border-b border-slate-200">
+        <section class="pt-40 pb-20 bg-slate-50 border-b border-gray-200">
             <div class="max-w-5xl mx-auto px-6">
-                <div class="max-w-3xl">
-                    <span
-                        class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
+                <div class="max-w-3xl text-center mx-auto">
+                    <span class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-indigo-600">
                         Semester I
                     </span>
-                    <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mt-4">
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mt-4">
                         Building the foundation.
                     </h1>
-                    <p class="text-lg md:text-xl text-slate-500 leading-8 mt-6 max-w-2xl">
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed mt-6 max-w-2xl mx-auto">
                         Building the foundation of education, pedagogy, and professional growth.
                     </p>
                 </div>
@@ -95,141 +70,89 @@
         </section>
 
         <!-- Orientation -->
-        <section class="py-20 md:py-24 bg-stone-50">
+        <section class="py-20 md:py-24 bg-white border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div class="order-2 md:order-1">
-                        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                            <img src="../assets/images/semester-1/orientation.jpeg" alt="Semester I Orientation Session"
-                                class="w-full aspect-[4/3] rounded-xl object-cover">
-                        </div>
+                    <div class="order-2 md:order-1 relative group rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-white p-2">
+                        <img src="../assets/images/semester-1/orientation.jpeg" alt="Semester I Orientation Session" class="w-full aspect-[4/3] rounded-2xl object-cover" loading="lazy">
                     </div>
 
-                    <div class="order-1 md:order-2">
-                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
-                            The Beginning
-                        </span>
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
-                            Orientation Program
-                        </h2>
-                        <div class="w-10 h-1 bg-indigo-600 mt-5"></div>
-                        <p class="text-lg text-slate-600 leading-8 mt-7">
-                            My journey in the B.Ed program began with the orientation program. The session introduced us
-                            to the academic structure of the programme, the syllabus, pedagogy subjects, and the
-                            expectations of a student teacher.
+                    <div class="order-1 md:order-2 flex flex-col">
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">The Beginning</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mt-3">Orientation Program</h2>
+                        <div class="w-12 h-1 bg-indigo-600 rounded-full mt-4"></div>
+                        <p class="text-lg text-gray-700 leading-relaxed mt-6">
+                            My journey in the B.Ed program began with the orientation program. The session introduced us to the academic structure of the programme, the syllabus, pedagogy subjects, and the expectations of a student teacher.
                         </p>
-                        <p class="text-slate-500 leading-8 mt-5">
-                            It was an important beginning that helped me understand the responsibilities of a teacher
-                            and prepared me to connect theoretical learning with practical classroom experiences.
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            It was an important beginning that helped me understand the responsibilities of a teacher and prepared me to connect theoretical learning with practical classroom experiences.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- First Seminar -->
-        <section class="py-20 md:py-24 bg-white border-y border-slate-200">
+        <!-- First Seminar (Image uncropped & naturally proportioned) -->
+        <section class="py-20 md:py-24 bg-slate-50 border-b border-gray-200">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid md:grid-cols-12 gap-12 items-center">
-                    <div class="md:col-span-5">
-                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
-                            Academic Experience
-                        </span>
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
-                            My First Seminar
-                        </h2>
-                        <div class="w-10 h-1 bg-indigo-600 mt-5"></div>
-                        <p class="text-slate-600 leading-8 mt-7">
-                            My first seminar during the B.Ed programme was on
-                            <strong class="text-slate-900">Education Psychology</strong>.
-                            It was one of my first opportunities to explore an academic topic through seminar-based
-                            learning.
+                    <div class="md:col-span-5 flex flex-col">
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Academic Experience</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mt-3">My First Seminar</h2>
+                        <div class="w-12 h-1 bg-teal-600 rounded-full mt-4"></div>
+                        <p class="text-gray-700 leading-relaxed mt-6 text-lg">
+                            My first seminar during the B.Ed programme was on <strong class="text-gray-900">Education Psychology</strong>. It was one of my first opportunities to explore an academic topic through seminar-based learning.
                         </p>
-                        <p class="text-slate-500 leading-8 mt-5">
-                            Preparing for the seminar helped me develop a better understanding of the subject while
-                            improving my communication, presentation skills, confidence, and ability to explain ideas
-                            clearly as a student teacher.
+                        <p class="text-gray-600 leading-relaxed mt-4">
+                            Preparing for the seminar helped me develop a better understanding of the subject while improving my communication, presentation skills, confidence, and ability to explain ideas clearly.
                         </p>
-                        <div class="flex flex-wrap gap-2 mt-7">
-                            <span class="px-4 py-2 rounded-lg bg-indigo-50 text-indigo-700 text-sm font-semibold">
-                                Education Psychology
-                            </span>
-                            <span class="px-4 py-2 rounded-lg bg-slate-100 text-slate-600 text-sm font-semibold">
-                                First Seminar
-                            </span>
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            <span class="px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-sm font-bold">Education Psychology</span>
+                            <span class="px-4 py-2 rounded-full bg-white border border-gray-300 text-gray-600 text-sm font-bold shadow-sm">First Seminar</span>
                         </div>
                     </div>
 
-                    <div class="md:col-span-7">
-                        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                            <img src="../assets/images/semester-1/seminar1.jpeg"
-                                alt="Afreen presenting Education Psychology Seminar"
-                                class="w-full h-auto rounded-xl object-cover">
-                        </div>
+                    <div class="md:col-span-7 rounded-3xl overflow-hidden border border-gray-100 bg-white p-3 shadow-md flex items-center justify-center">
+                        <img src="../assets/images/semester-1/seminar1.jpeg" alt="Afreen presenting Education Psychology Seminar" class="w-full h-auto rounded-2xl object-contain max-h-[500px]" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Biological Science -->
-        <section class="py-20 md:py-24 bg-stone-50">
+        <section class="py-20 md:py-24 bg-white border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="mb-12">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
-                        Pedagogy Subject
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
-                        Content cum Pedagogy of Biological Science
-                    </h2>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-rose-600">Pedagogy Subject</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mt-3">Content cum Pedagogy of Biological Science</h2>
+                    <div class="w-12 h-1 bg-rose-600 rounded-full mt-4"></div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
                     <div>
-                        <h3 class="text-xl font-bold text-slate-900">
-                            Making Science Visual
-                        </h3>
-                        <p class="text-slate-600 leading-8 mt-5">
-                            My Biological Science pedagogy focuses on bringing complex anatomical and physiological
-                            concepts to life for students through visual and interactive methods.
+                        <h3 class="text-2xl font-bold text-gray-900">Making Science Visual</h3>
+                        <p class="text-gray-700 leading-relaxed mt-4 text-lg">
+                            My Biological Science pedagogy focuses on bringing complex anatomical and physiological concepts to life for students through visual and interactive methods.
                         </p>
 
-                        <ul class="space-y-5 mt-7">
-                            <li class="flex items-start text-slate-600 leading-7">
-                                <span
-                                    class="w-7 h-7 shrink-0 flex items-center justify-center rounded-full bg-indigo-50 text-indigo-600 mr-3 mt-1">
-                                    ✓
-                                </span>
-                                <span>
-                                    <strong class="text-slate-900">Teaching Aids:</strong>
-                                    Creating and utilizing detailed, handmade charts like the Anatomy of the Brain
-                                    to engage students visually.
-                                </span>
+                        <ul class="space-y-6 mt-8">
+                            <li class="flex items-start text-gray-700 leading-relaxed">
+                                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 mr-4 font-bold">✓</span>
+                                <span><strong class="text-gray-900">Teaching Aids:</strong> Creating and utilizing detailed, handmade charts like the Anatomy of the Brain to engage students visually.</span>
                             </li>
-
-                            <li class="flex items-start text-slate-600 leading-7">
-                                <span
-                                    class="w-7 h-7 shrink-0 flex items-center justify-center rounded-full bg-indigo-50 text-indigo-600 mr-3 mt-1">
-                                    ✓
-                                </span>
-                                <span>
-                                    <strong class="text-slate-900">Chalkboard Diagrams:</strong>
-                                    Practicing live-drawing of complex systems, such as the human heart and
-                                    circulation, to explain step-by-step processes clearly.
-                                </span>
+                            <li class="flex items-start text-gray-700 leading-relaxed">
+                                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-full bg-rose-100 text-rose-600 mr-4 font-bold">✓</span>
+                                <span><strong class="text-gray-900">Chalkboard Diagrams:</strong> Practicing live-drawing of complex systems, such as the human heart and circulation, to explain step-by-step processes.</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                            <img src="../assets/images/semester-1/human.jpeg" alt="Teaching Human Brain with Chart"
-                                class="w-full aspect-[4/5] object-cover rounded-xl">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-md">
+                            <img src="../assets/images/semester-1/human.jpeg" alt="Teaching Human Brain with Chart" class="w-full aspect-[4/5] object-cover rounded-2xl" loading="lazy">
                         </div>
-
-                        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm mt-8">
-                            <img src="../assets/images/semester-1/circulation.jpeg"
-                                alt="Drawing Circulation System on Chalkboard"
-                                class="w-full aspect-[4/5] object-cover rounded-xl">
+                        <div class="rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-md mt-10">
+                            <img src="../assets/images/semester-1/circulation.jpeg" alt="Drawing Circulation System on Chalkboard" class="w-full aspect-[4/5] object-cover rounded-2xl" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -237,54 +160,37 @@
         </section>
 
         <!-- Hindi -->
-        <section class="py-20 md:py-24 bg-white">
+        <section class="py-20 md:py-24 bg-slate-50 border-b border-gray-200">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="mb-12">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
-                        Pedagogy Subject
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
-                        Content cum Pedagogy of Hindi
-                    </h2>
-                    <div class="w-10 h-1 bg-indigo-600 mt-5"></div>
+                <div class="mb-12 text-right">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">Pedagogy Subject</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mt-3">Content cum Pedagogy of Hindi</h2>
+                    <div class="w-12 h-1 bg-indigo-600 rounded-full mt-4 ml-auto"></div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div class="order-2 md:order-1">
-                        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                            <img src="../assets/images/semester-1/HIndipedagogi.jpeg"
-                                alt="Afreen teaching Hindi Pedagogy"
-                                class="w-full aspect-[4/5] object-cover rounded-xl">
-                        </div>
+                    <div class="order-2 md:order-1 rounded-3xl overflow-hidden border border-gray-100 bg-white p-2 shadow-md">
+                        <img src="../assets/images/semester-1/HIndipedagogi.jpeg" alt="Afreen teaching Hindi Pedagogy" class="w-full aspect-[4/5] object-cover rounded-2xl" loading="lazy">
                     </div>
 
                     <div class="order-1 md:order-2">
-                        <h3 class="text-xl font-bold text-slate-900">
-                            Language Teaching and Methodologies
-                        </h3>
-
-                        <p class="text-slate-600 leading-8 mt-5">
-                            Hindi pedagogy helped me understand how language and literature can be taught effectively
-                            according to the needs and learning levels of students. The subject connected knowledge of
-                            Hindi with practical approaches to classroom teaching.
+                        <h3 class="text-2xl font-bold text-gray-900">Language Teaching & Methodologies</h3>
+                        <p class="text-gray-700 leading-relaxed mt-4 text-lg">
+                            Hindi pedagogy helped me understand how language and literature can be taught effectively according to the needs and learning levels of students. The subject connected knowledge of Hindi with practical approaches to classroom teaching.
                         </p>
 
-                        <ul class="space-y-5 mt-7">
-                            <li class="flex items-start text-slate-600 leading-7">
-                                <span class="text-indigo-600 font-bold mr-3">01</span>
+                        <ul class="space-y-6 mt-8">
+                            <li class="flex items-start text-gray-700 leading-relaxed">
+                                <span class="text-indigo-600 font-black text-lg mr-4 border-b-2 border-indigo-600">01</span>
                                 Understanding approaches for teaching Hindi grammar, language, and literature.
                             </li>
-
-                            <li class="flex items-start text-slate-600 leading-7">
-                                <span class="text-indigo-600 font-bold mr-3">02</span>
-                                Using expressive language, storytelling, discussion, and other learner-centred
-                                techniques to encourage participation.
+                            <li class="flex items-start text-gray-700 leading-relaxed">
+                                <span class="text-indigo-600 font-black text-lg mr-4 border-b-2 border-indigo-600">02</span>
+                                Using expressive language, storytelling, discussion, and other learner-centred techniques.
                             </li>
-
-                            <li class="flex items-start text-slate-600 leading-7">
-                                <span class="text-indigo-600 font-bold mr-3">03</span>
-                                Developing classroom activities, board-work, and learning tasks to reinforce concepts
-                                and improve language skills.
+                            <li class="flex items-start text-gray-700 leading-relaxed">
+                                <span class="text-indigo-600 font-black text-lg mr-4 border-b-2 border-indigo-600">03</span>
+                                Developing classroom activities, board-work, and learning tasks to reinforce concepts.
                             </li>
                         </ul>
                     </div>
@@ -293,145 +199,71 @@
         </section>
 
         <!-- Yoga Education -->
-        <section class="py-20 md:py-24 bg-stone-50 border-y border-slate-200">
+        <section class="py-20 md:py-24 bg-white border-b border-gray-100">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid md:grid-cols-12 gap-12 lg:gap-16 items-start">
                     <div class="md:col-span-4 md:sticky md:top-32">
-                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">
-                            Health & Wellness
-                        </span>
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
-                            Yoga Education
-                        </h2>
-                        <div class="w-10 h-1 bg-teal-600 mt-5"></div>
-                        <p class="text-slate-600 leading-8 mt-6">
-                            Yoga Education introduced an important connection between physical well-being and education.
-                            During International Yoga Day activities, I participated in creative and practical
-                            activities
-                            that highlighted the importance of yoga, physical fitness, discipline, and a healthy
-                            lifestyle.
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Health & Wellness</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mt-3">Yoga Education</h2>
+                        <div class="w-12 h-1 bg-teal-600 rounded-full mt-4"></div>
+                        <p class="text-gray-700 leading-relaxed mt-6 text-lg">
+                            Yoga Education introduced an important connection between physical well-being and education. During International Yoga Day, I participated in creative and practical activities highlighting fitness, discipline, and a healthy lifestyle.
                         </p>
-                        <p class="text-slate-500 leading-8 mt-5">
-                            The activities encouraged participation beyond the classroom and helped me understand how
-                            health and wellness can become meaningful parts of educational practice.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mt-7">
-                            <span class="px-4 py-2 rounded-lg bg-teal-50 text-teal-700 text-sm font-semibold">
-                                Yoga Day
-                            </span>
-                            <span class="px-4 py-2 rounded-lg bg-teal-50 text-teal-700 text-sm font-semibold">
-                                Wellness
-                            </span>
-                            <span class="px-4 py-2 rounded-lg bg-teal-50 text-teal-700 text-sm font-semibold">
-                                Physical Fitness
-                            </span>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="px-3 py-1.5 rounded-full bg-teal-50 text-teal-700 text-xs font-bold">Yoga Day</span>
+                            <span class="px-3 py-1.5 rounded-full bg-teal-50 text-teal-700 text-xs font-bold">Wellness</span>
+                            <span class="px-3 py-1.5 rounded-full bg-teal-50 text-teal-700 text-xs font-bold">Fitness</span>
                         </div>
                     </div>
 
                     <div class="md:col-span-8">
-                        <div class="grid grid-cols-2 gap-4 md:gap-5">
-                            <div
-                                class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                                <div class="relative overflow-hidden rounded-xl">
-                                    <img src="../assets/images/semester-1/firstYoga.jpeg"
-                                        alt="International Yoga Day creative activity"
-                                        class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-500">
-                                    <div
-                                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-14">
-                                        <span class="text-xs text-teal-200 font-semibold uppercase tracking-wider">
-                                            Activity 01
-                                        </span>
-                                        <h3 class="text-white font-semibold mt-1">
-                                            Creative Expression
-                                        </h3>
-                                        <p class="text-slate-300 text-xs mt-1">
-                                            International Yoga Day activity and artwork.
-                                        </p>
+                        <div class="grid grid-cols-2 gap-4 md:gap-6">
+                            <!-- Act 1 -->
+                            <div class="group relative rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-sm">
+                                <div class="relative overflow-hidden rounded-2xl">
+                                    <img src="../assets/images/semester-1/firstYoga.jpeg" alt="Creative activity" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-700" loading="lazy">
+                                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900 to-transparent p-5 pt-16">
+                                        <h3 class="text-white font-bold">Creative Expression</h3>
                                     </div>
                                 </div>
                             </div>
 
-                            <div
-                                class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm mt-8">
-                                <div class="relative overflow-hidden rounded-xl">
-                                    <img src="../assets/images/semester-1/Yogapracticle.jpeg"
-                                        alt="Practical Yoga activity"
-                                        class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-500">
-                                    <div
-                                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-14">
-                                        <span class="text-xs text-teal-200 font-semibold uppercase tracking-wider">
-                                            Activity 02
-                                        </span>
-                                        <h3 class="text-white font-semibold mt-1">
-                                            Practical Application
-                                        </h3>
-                                        <p class="text-slate-300 text-xs mt-1">
-                                            Outdoor participation and physical activity.
-                                        </p>
+                            <!-- Act 2 -->
+                            <div class="group relative rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-sm mt-8">
+                                <div class="relative overflow-hidden rounded-2xl">
+                                    <img src="../assets/images/semester-1/Yogapracticle.jpeg" alt="Practical Yoga activity" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-700" loading="lazy">
+                                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900 to-transparent p-5 pt-16">
+                                        <h3 class="text-white font-bold">Practical Application</h3>
                                     </div>
                                 </div>
                             </div>
 
-                            <div
-                                class="col-span-2 group relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                                <div class="relative overflow-hidden rounded-xl">
-                                    <img src="../assets/images/semester-1/yoga-group.jpeg"
-                                        alt="Students participating in a group Yoga activity"
-                                        class="w-full aspect-[16/8] object-cover group-hover:scale-105 transition duration-500">
-                                    <div
-                                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-6 pt-16">
-                                        <span class="text-xs text-teal-200 font-semibold uppercase tracking-wider">
-                                            Activity 03
-                                        </span>
-                                        <h3 class="text-white text-lg font-semibold mt-1">
-                                            Group Yoga Practice
-                                        </h3>
-                                        <p class="text-slate-300 text-sm mt-1">
-                                            Collective participation promoting discipline, concentration, and
-                                            well-being.
-                                        </p>
+                            <!-- Act 3 (Wide) -->
+                            <div class="col-span-2 group relative rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-sm">
+                                <div class="relative overflow-hidden rounded-2xl">
+                                    <img src="../assets/images/semester-1/yoga2.jpeg" alt="Group Yoga" class="w-full aspect-[16/8] object-cover group-hover:scale-105 transition duration-700" loading="lazy">
+                                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900 to-transparent p-6 pt-20">
+                                        <h3 class="text-white text-xl font-bold">Group Yoga Practice</h3>
                                     </div>
                                 </div>
                             </div>
 
-                            <div
-                                class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm">
-                                <div class="relative overflow-hidden rounded-xl">
-                                    <img src="../assets/images/semester-1/yoga-poster.jpeg"
-                                        alt="International Yoga Day creative poster activity"
-                                        class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-500">
-                                    <div
-                                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-5 pt-14">
-                                        <span class="text-xs text-teal-200 font-semibold uppercase tracking-wider">
-                                            Activity 04
-                                        </span>
-                                        <h3 class="text-white font-semibold mt-1">
-                                            Yoga Day Artwork
-                                        </h3>
-                                        <p class="text-slate-300 text-xs mt-1">
-                                            Creative representation of yoga and healthy living.
-                                        </p>
+                            <!-- Act 4 -->
+                            <div class="group relative rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-sm">
+                                <div class="relative overflow-hidden rounded-2xl">
+                                    <img src="../assets/images/semester-1/yoga3.jpeg" alt="Yoga Asanas" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-700" loading="lazy">
+                                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900 to-transparent p-5 pt-16">
+                                        <h3 class="text-white font-bold">Yoga Day Artwork</h3>
                                     </div>
                                 </div>
                             </div>
 
-                            <div
-                                class="group relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm mt-8">
-                                <div class="relative overflow-hidden rounded-xl">
-                                    <img src="../assets/images/semester-1/yoga-asana.jpeg"
-                                        alt="Students performing Yoga asanas"
-                                        class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-500">
-                                    <div
-                                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-5 pt-14">
-                                        <span class="text-xs text-teal-200 font-semibold uppercase tracking-wider">
-                                            Activity 05
-                                        </span>
-                                        <h3 class="text-white font-semibold mt-1">
-                                            Yoga Asanas
-                                        </h3>
-                                        <p class="text-slate-300 text-xs mt-1">
-                                            Practising postures to develop physical fitness and awareness.
-                                        </p>
+                            <!-- Act 5 -->
+                            <div class="group relative rounded-3xl overflow-hidden border border-gray-100 bg-slate-50 p-2 shadow-sm mt-8">
+                                <div class="relative overflow-hidden rounded-2xl">
+                                    <img src="../assets/images/semester-1/yoga4.png" alt="Yoga Asanas" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-700" loading="lazy">
+                                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900 to-transparent p-5 pt-16">
+                                        <h3 class="text-white font-bold">Yoga Asanas</h3>
                                     </div>
                                 </div>
                             </div>
@@ -442,59 +274,43 @@
         </section>
         
         <!-- Reflection -->
-        <section class="py-20 md:py-24 bg-white">
+        <section class="py-20 md:py-24 bg-slate-50">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
-                    Looking Back
-                </span>
-
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mt-3">
-                    Semester I Reflection
-                </h2>
-
-                <div class="w-10 h-1 bg-indigo-600 mt-5 mx-auto"></div>
-
-                <p class="text-lg text-slate-600 leading-8 mt-7">
-                    Semester I provided the foundation for my journey as a student teacher. Through orientation,
-                    academic seminars, pedagogy learning, and educational activities, I began developing a clearer
-                    understanding of teaching and learning.
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">Looking Back</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mt-3">Semester I Reflection</h2>
+                <div class="w-12 h-1 bg-indigo-600 rounded-full mt-4 mx-auto"></div>
+                <p class="text-lg text-gray-700 leading-relaxed mt-8 max-w-2xl mx-auto">
+                    Semester I provided the foundation for my journey as a student teacher. Through orientation, academic seminars, pedagogy learning, and educational activities, I began developing a clearer understanding of teaching and learning.
                 </p>
-
-                <p class="text-slate-500 leading-8 mt-5">
-                    These experiences helped me improve my communication, presentation, classroom awareness, and
-                    confidence while encouraging me to connect theoretical knowledge with practical educational
-                    experiences.
-                </p>
-
-                <div class="flex flex-wrap justify-center gap-2 mt-8">
-                    <span class="px-4 py-2 rounded-lg bg-indigo-50 text-indigo-700 text-sm font-semibold">
-                        Communication
-                    </span>
-                    <span class="px-4 py-2 rounded-lg bg-indigo-50 text-indigo-700 text-sm font-semibold">
-                        Presentation
-                    </span>
-                    <span class="px-4 py-2 rounded-lg bg-indigo-50 text-indigo-700 text-sm font-semibold">
-                        Pedagogy
-                    </span>
-                    <span class="px-4 py-2 rounded-lg bg-indigo-50 text-indigo-700 text-sm font-semibold">
-                        Student Teacher Development
-                    </span>
+                <div class="flex flex-wrap justify-center gap-3 mt-8">
+                    <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-bold shadow-sm">Communication</span>
+                    <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-bold shadow-sm">Presentation</span>
+                    <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-bold shadow-sm">Pedagogy</span>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div>
-                <h2>Shaik Afreen Abeda</h2>
-                <p>B.Ed Student Teacher</p>
+    <!-- Standard Footer -->
+    <footer class="bg-gray-950 text-white">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <h2 class="text-xl font-bold">Shaik Afreen Abeda</h2>
+                    <p class="text-sm text-gray-400 mt-1">B.Ed Student Teacher</p>
+                </div>
+                <p class="text-sm text-gray-500">© 2026 Shaik Afreen Abeda. All rights reserved.</p>
             </div>
-            <p>© 2026 Shaik Afreen Abeda. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-1 z-50 focus:outline-none" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
     <script src="../js/main.js"></script>
 </body>
